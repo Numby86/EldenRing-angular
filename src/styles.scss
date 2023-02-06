@@ -1,7 +1,37 @@
+*,
+*::before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --ifm-color-primary: #ab966f;
+    --ifm-color-primary-dark: #998763;
+    --ifm-color-primary-darker: #887858;
+    --ifm-color-primary-darkest: #77694d;
+    --ifm-color-primary-light: #b3a07d;
+    --ifm-color-primary-lighter: #bbab8b;
+    --ifm-color-primary-lightest: #c4b59a;
+
+    --ifm-code-font-size: 95%;
+
+    --size-btn-collapse: 10.5rem;
+
+    --time-animation: 0.3s;
+
+    --box-shadow: 3px 7px 7px rgba(0 0 0 / 22%)
+}
 body{
     // background-color: rgb(41, 41, 41);
-    background: url('./assets/images/blackCaballero.jpg') no-repeat center center fixed;
+    font-family: 'cascadia code';
+    background: url('./assets/images/blackCaballero.jpg') 
+        no-repeat center center fixed;
     background-position: center;
     background-size: cover;
     object-fit: cover;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
 }
