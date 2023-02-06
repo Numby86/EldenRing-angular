@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    // background-color: rgb(41, 41, 41);
+    background: url('./assets/images/blackCaballero.jpg') no-repeat center center fixed;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+}
