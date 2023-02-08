@@ -1,0 +1,36 @@
+<h1
+class="main__h1"
+>ELIGE TU CLASE</h1>
+    <div
+    class="main"
+    >
+    <div
+    class="main__card"
+    *ngFor="let clase of clases"
+    >
+        <img
+        class="main__card-image"
+        [src]="clase.image" 
+        alt="image class">
+        <p>{{ clase.id }}</p>
+        <p>{{ clase.name }}</p>
+    </div>
+        <div
+        class="main__card"
+        *ngFor="let user of users"
+        >
+            <img
+            class="main__card-image"
+            [src]="user.image" 
+            alt="image class">
+            <p>{{ user.id }}</p>
+            <p>{{ user.name }}</p>
+            <p>{{ user.edad }}</p>
+            <p>{{ user.complexion }}</p>
+            <img
+            class="main__card-image"
+            [src]="user.clase?.image" 
+            alt="image class">
+            <p>{{ user.clase?.stats?.dexterity }}</p>
+        </div>
+    </div>

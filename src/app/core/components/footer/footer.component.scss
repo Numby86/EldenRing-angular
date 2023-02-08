@@ -9,20 +9,20 @@
 .fa-brands{
     font-weight: bold;
     font-size: 18px;
-    color: rgba(255, 0, 0, 0.6);
+    color: #ab966f;
 }
 a{
     font-weight: bold;
     font-size: 18px;
-    color: rgba(255, 0, 0, 0.6);
+    color: #ab966f;
     margin-bottom: 10px;
     text-decoration: none;
     padding: 2px 5px 2px 5px;
     &:visited{
-        color: rgba(255, 0, 0, 0.6);
+        color: #ab966f;
     }
     &:hover{
-        box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+        box-shadow: 0 0 8px #ab966f;
         border-radius: 10px;
     }
 }

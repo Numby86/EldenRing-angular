@@ -1,0 +1,16 @@
+<div
+class="bosses"
+>
+    <div
+    class="bosses__card"
+    *ngFor="let boss of bosses; let i = index"
+    >
+        <div
+        class="bosses__card-data"
+        >
+            <p
+            class="bosses__card-list"
+            >{{ i + 1 }} - {{ boss.name }}</p>
+        </div>
+    </div>
+</div>
