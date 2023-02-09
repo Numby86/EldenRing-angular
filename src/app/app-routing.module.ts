@@ -20,9 +20,13 @@ const routes: Routes = [
     loadChildren: () => import('./pages/weapons/weapons.module').then(m => m.WeaponsModule)
   },
   {
+    path: 'weapons-detail/:id',
+    loadChildren: () => import('./pages/weapons-detail/weapons-detail.module').then(m => m.WeaponsDetailModule)
+  },
+  {
     path: 'bosses',
     loadChildren: () => import('./pages/bosses/bosses.module').then(m => m.BossesModule)
-  },
+  },  
   {
     path: '**',
     loadChildren: () => import('./pages/error-page/error-page.module').then(m => m.ErrorPageModule)

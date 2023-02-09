@@ -1,7 +1,12 @@
 <div
+*ngFor="let weapon of weapons"
 class="main"
+(click)="goToDetail(weapon.id)"
 >
-<!-- <p *ngFor="let weapon of weapons">
+<img
+    [src]="weapon.image" 
+    alt={{weapon.name}}>
+<p >
     {{weapon.name}}
-</p> -->
+</p>
 </div>

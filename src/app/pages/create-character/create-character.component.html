@@ -1,1 +1,112 @@
-<div>create-character works!</div>
+<div
+class="create"
+>
+    <form
+    *ngIf="createForm"
+    (submit)="sendForm()"
+    class="create__form"
+    [formGroup]="createForm"
+    >
+        <input
+        class="create__form-name"
+        name="name"
+        placeholder="Nombre de tu personaje"
+        type="text"
+        formControlName="name">
+        <p
+        *ngIf="!createForm.get('name')?.valid 
+            && createForm.get('name')?.dirty  
+            && createForm.get('name')?.errors?.['required']"
+        class="create__form-error"
+        >El valor de este campo es obligatorio</p>
+        <input
+        class="create__form-edad"
+        name="edad"
+        placeholder="Edad" 
+        type="text" 
+        formControlName="edad">
+        <p
+        *ngIf="!createForm.get('edad')?.valid 
+            && createForm.get('edad')?.dirty  
+            && createForm.get('edad')?.errors?.['required']"
+        class="create__form-error"
+        >El valor de este campo es obligatorio</p>
+        <p
+        *ngIf="!createForm.get('edad')?.valid 
+            && createForm.get('edad')?.dirty  
+            && createForm.get('edad')?.errors?.['maxlength']"
+        class="create__form-error"
+        >La edad tiene un maximo de 3 caracteres</p>
+        <p
+        *ngIf="!createForm.get('edad')?.valid 
+            && createForm.get('edad')?.dirty  
+            && createForm.get('edad')?.errors?.['pattern']"
+        class="create__form-error"
+        >Solo se pueden usar numeros en este campo</p>
+        <input
+        class="create__form-image"
+        name="image"
+        placeholder="Avatar" 
+        type="text" 
+        formControlName="image">
+        <select
+        class="create__form-complexion"
+        name="complexion" 
+        formControlName="complexion">
+            <option 
+            class="create__form-option" 
+            default value="">Complexion</option>
+            <option
+            class="create__form-option"
+            *ngFor="let complexion of complexiones" 
+            value="complexion">{{ complexion }}</option>
+        </select>
+        <p
+        *ngIf="!createForm.get('complexion')?.valid 
+            && createForm.get('complexion')?.touched  
+            && createForm.get('complexion')?.errors?.['required']"
+        class="create__form-error"
+        >El valor de este campo es obligatorio</p>
+        <select
+        class="create__form-recuerdo"
+        name="recuerdo" 
+        formControlName="recuerdo">
+            <option 
+            class="create__form-option"
+            default value="">Recuerdo</option>    
+            <option
+            class="create__form-option"
+            *ngFor="let recuerdo of recuerdos" 
+            value="recuerdo">{{ recuerdo }}</option>
+        </select>
+        <p
+        *ngIf="!createForm.get('recuerdo')?.valid 
+            && createForm.get('recuerdo')?.touched  
+            && createForm.get('recuerdo')?.errors?.['required']"
+        class="create__form-error"
+        >El valor de este campo es obligatorio</p>
+        <select
+        class="create__form-clase"
+        name="clase" 
+        formControlName="clase">
+            <option 
+            class="create__form-option"
+            default value="">Clase</option>
+            <option
+            class="create__form-option"
+            *ngFor="let clase of clases" 
+            value="clase">{{ clase }}</option>
+        </select>
+        <p
+        *ngIf="!createForm.get('clase')?.valid 
+            && createForm.get('clase')?.touched  
+            && createForm.get('clase')?.errors?.['required']"
+        class="create__form-error"
+        >El valor de este campo es obligatorio</p>
+        <button
+        type="submit"
+        [disabled]="!createForm.valid"
+        [ngStyle]="{color: !createForm.valid && createForm.touched ? 'red' : 'black'}"
+        class="btn"> CREATE </button>
+    </form>
+</div>

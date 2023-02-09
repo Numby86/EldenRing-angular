@@ -1,0 +1,26 @@
+<div
+class="weaponDET"
+>
+    <div
+    class="weaponDET__card"
+    *ngIf="weapon"
+    >
+        <img 
+        class="weaponDET__card-image"
+        [src]="weapon.data.image" 
+        alt="imagen {{ weapon.data.name }}">
+        <div
+        class="weaponDET__card-text"
+        >
+            <p
+            class="weaponDET__card-name"
+            >{{ weapon.data.name }}</p>
+            <p
+            class="weaponDET__card-category"
+            >{{ weapon.data.category }}</p>
+            <p
+            class="weaponDET__card-description"
+            >{{ weapon.data.description }}</p>
+        </div>
+    </div>
+</div>

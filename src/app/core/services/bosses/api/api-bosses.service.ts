@@ -23,4 +23,14 @@ export class ApiBossesService {
       })
     );
   }
+
+  public getBossDetail(id: string){
+
+    return this.http.get<BossesResponse>(`$(BOSSES_URL)/${id}`)
+    .pipe(
+      map(resp => {
+        return resp.data;
+      })
+    );
+  }
 }

@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Bosses } from './../../core/services/bosses/Bosses.model';
 import { ApiBossesService } from './../../core/services/bosses/api/api-bosses.service';
 import { Component, OnInit } from '@angular/core';
@@ -13,6 +14,7 @@ export class BossesComponent implements OnInit {
   public bossId: string[] = [];
 
   constructor(
+    private router: Router,
     private bossesService: ApiBossesService
   ){}
 
@@ -25,9 +27,12 @@ export class BossesComponent implements OnInit {
     })
   }
 
-  cojoId(){
-    
+  public detail() {
+    if (this.bosses) {
+      this.router.navigate(['detail/boss', this.bosses.map((boss) => boss.id)]);
+    }
   }
+
 
 }
 
