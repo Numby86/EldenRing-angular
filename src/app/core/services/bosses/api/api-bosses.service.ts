@@ -1,9 +1,12 @@
+import { Boss } from './../Api-bossesId';
 import { Injectable } from '@angular/core';
 import { BossesResponse } from '../ApiBosses.model';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs';
+import { Observable } from 'rxjs';
 
-const BOSSES_URL = 'https://eldenring.fanapis.com/api/bosses';
+const API_BOSSES_URL = 'https://eldenring.fanapis.com/api/bosses';
+const limit = '?limit=100';
+const page = '&page=5';
 
 @Injectable({
   providedIn: 'root'
@@ -14,23 +17,11 @@ export class ApiBossesService {
     private http: HttpClient
   ) {}
 
-  public cargarBosses(){
-
-    return this.http.get<BossesResponse>(BOSSES_URL)
-    .pipe(
-      map(resp => {
-        return resp.data;
-      })
-    );
+  public getApiBosses(): Observable<BossesResponse>{
+    return this.http.get<BossesResponse>(`${API_BOSSES_URL}${limit}`);
   }
 
-  public getBossDetail(id: string){
-
-    return this.http.get<BossesResponse>(`$(BOSSES_URL)/${id}`)
-    .pipe(
-      map(resp => {
-        return resp.data;
-      })
-    );
+  public getApiBossDetail(id: string): Observable<Boss>{
+    return this.http.get<Boss>(`${API_BOSSES_URL}/${id}`)
   }
 }

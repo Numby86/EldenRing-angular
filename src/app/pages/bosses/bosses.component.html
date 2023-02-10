@@ -6,7 +6,7 @@ class="bosses"
     *ngFor="let boss of bosses; let i = index"
     >
         <div
-        (click)="detail()"
+        (click)="goToDetail(boss.id)"
         class="bosses__card-data"
         >
             <p

@@ -1,9 +1,23 @@
 .main{
-    width: calc(100% - 30%);
-    margin-left: 20%;
-    height: 500px;
-    & img {
-        width: 150px;
-        height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    &__card{
+        margin: 7px;
+        width: 600px;
+        
+        &-data{
+            width: 100%;
+            font-size: 20px;
+            background-color: #77694d;
+            color: black;
+            padding: 10px;
+            border-radius: 10px;
+            &:hover{
+                box-shadow: 0 0 15px #ab966f;
+            }
+        }
     }
 }

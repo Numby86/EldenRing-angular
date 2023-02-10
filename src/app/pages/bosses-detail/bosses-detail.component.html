@@ -1,0 +1,50 @@
+<div
+class="bossDET"
+>
+    <div
+    (click)="backToList()"
+    class="bossDET__card"
+    *ngIf="boss"
+    >
+        <div
+        class="bossDET__card-imageStats"
+        >
+            <img 
+            class="bossDET__card-image"
+            [src]="boss.data.image" 
+            alt="imagen {{ boss.data.name }}">
+            <div
+            class="bossDET__card-dropsStats"
+            >
+                <p
+                class="bossDET__card-healthPoints"
+                >PUNTOS DE VIDA: {{ boss.data.healthPoints }}</p>
+                <p
+                class="bossDET__card-drops"
+                >DROPS: </p>
+                <p
+                class="bossDET__card-drops"
+                >{{ boss.data.drops }}</p>
+            </div>
+        </div>
+        <div
+        class="bossDET__card-text"
+        >
+            <p
+            class="bossDET__card-name"
+            >{{ boss.data.name }}</p>
+            <p
+            class="bossDET__card-region"
+            >Region: {{ boss.data.region }}</p>
+            <p
+            class="bossDET__card-description"
+            >{{ boss.data.description }}</p>
+        </div>
+    </div>
+    <button
+    class="btn"
+    (click)="backToList()"
+    >
+        BACK TO LIST
+    </button>
+</div>

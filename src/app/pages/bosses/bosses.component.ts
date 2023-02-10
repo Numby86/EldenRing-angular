@@ -1,6 +1,6 @@
+import { BossesService } from './../../core/services/bosses/bosses.service';
 import { Router } from '@angular/router';
 import { Bosses } from './../../core/services/bosses/Bosses.model';
-import { ApiBossesService } from './../../core/services/bosses/api/api-bosses.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,30 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BossesComponent implements OnInit {
 
-  public bosses: Bosses[] = [];
-  public bossId: string[] = [];
+    public bosses: Bosses[] = [];
 
-  constructor(
-    private router: Router,
-    private bossesService: ApiBossesService
-  ){}
+    constructor(
+      private router: Router,
+      private bossesService: BossesService
+    ){}
 
-  ngOnInit(): void {
-    this.bossesService.cargarBosses()
-    .subscribe(res => {
-
-      this.bosses = res;
-      
-    })
-  }
-
-  public detail() {
-    if (this.bosses) {
-      this.router.navigate(['detail/boss', this.bosses.map((boss) => boss.id)]);
+    public ngOnInit(): void {
+      this.bossesService.getBosses().subscribe((bossesFromApi) => {
+        this.bosses = bossesFromApi;
+      })
     }
+
+    public goToDetail(id: string){
+      if(this.bosses) {
+        this.router.navigate(['bosses-detail', id])
+      }
+    }
+
   }
-
-
-}
-
-

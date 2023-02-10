@@ -1,7 +1,6 @@
 import { Weapon } from './../../core/services/weapons/api-weaponId.model';
 import { WeaponsService } from './../../core/services/weapons/weapons.service';
 import { ActivatedRoute } from '@angular/router';
-import { ApiWeapon } from './../../core/services/weapons/weapon.model';
 import { Component } from '@angular/core';
 
 @Component({
@@ -20,14 +19,13 @@ export class WeaponsDetailComponent {
 
     this.activatedRoute.queryParams.subscribe((queryParams) => {
       console.log(queryParams);
-      
     });
 
     this.activatedRoute.params.subscribe((params) => {
       const weaponId = params['id'];
       this.weaponsService.getWeaponDetail(weaponId).subscribe((weapon) => {
+
         this.weapon = weapon;
-        console.log(weapon);
         
       })
     })
