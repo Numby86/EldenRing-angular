@@ -1,12 +1,17 @@
 <div
-*ngFor="let weapon of weapons"
-class="main"
-(click)="goToDetail(weapon.id)"
+class="weapons"
 >
-<img
-    [src]="weapon.image" 
-    alt={{weapon.name}}>
-<p >
-    {{weapon.name}}
-</p>
+    <div
+    class="weapons__card"
+    *ngFor="let weapon of weapons; let i = index"
+    >
+        <div
+        (click)="goToDetail(weapon.id)"
+        class="weapons__card-data"
+        >
+            <p
+            class="weapons__card-list"
+            >{{ i + 1 }} - {{ weapon.name }}</p>
+        </div>
+    </div>
 </div>

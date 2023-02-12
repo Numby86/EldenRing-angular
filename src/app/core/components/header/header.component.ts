@@ -10,8 +10,10 @@ export class HeaderComponent {
 
   constructor(
     private router: Router
-  ){
+  ){ }
 
+  public goHome(){
+    this.router.navigate(['home'])
   }
 
 }

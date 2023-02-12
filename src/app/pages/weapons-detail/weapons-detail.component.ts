@@ -1,6 +1,6 @@
 import { Weapon } from './../../core/services/weapons/api-weaponId.model';
 import { WeaponsService } from './../../core/services/weapons/weapons.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component } from '@angular/core';
 
 @Component({
@@ -14,7 +14,8 @@ export class WeaponsDetailComponent {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private weaponsService: WeaponsService
+    private weaponsService: WeaponsService,
+    private router: Router
   ){
 
     this.activatedRoute.queryParams.subscribe((queryParams) => {
@@ -29,6 +30,10 @@ export class WeaponsDetailComponent {
         
       })
     })
+  }
+
+  public backToList(){
+    this.router.navigate(['weapons'])
   }
 
 }

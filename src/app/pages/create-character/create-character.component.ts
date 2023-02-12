@@ -1,5 +1,6 @@
-import { clase, complexion, recuerdo } from './../../core/services/crateCharacter/arraysClases';
-import { Component } from '@angular/core';
+import { clase } from './../../core/services/crateCharacter/clase.data';
+import { complexion, recuerdo, claseName } from './../../core/services/crateCharacter/arraysClases';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -7,13 +8,18 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
   templateUrl: './create-character.component.html',
   styleUrls: ['./create-character.component.scss']
 })
-export class CreateCharacterComponent {
 
-  public createForm: FormGroup;
-  // public claseName: ClaseName[] = claseName;
-  public clases: string[] = clase;
+export class CreateCharacterComponent implements OnInit {
+
+ public createForm: FormGroup;
+
+  public clases = clase;
+  public claseName: string[] = claseName;
   public complexiones: string[] = complexion;
   public recuerdos: string[] = recuerdo;
+
+  public eleccion: any;
+  // public defaultSel: any;
 
   constructor(
     private fb: FormBuilder
@@ -28,6 +34,23 @@ export class CreateCharacterComponent {
       complexion: new FormControl('', [Validators.required]),
       recuerdo: new FormControl('', [Validators.required]),
       clase: new FormControl('', [Validators.required])
+    })
+  }
+
+  ngOnInit(): void {
+
+      this.createForm?.get('clase')?.valueChanges.subscribe((value) => {
+
+      const selectedClass = this.clases.find(clases => clases.name === value);
+
+      if (!value){
+        // const valueFr = this.clases.find(clases => clases.name === 'Warrior');
+        // this.eleccion = valueFr;
+        // console.log(this.eleccion);
+        return;
+      }
+
+      this.eleccion = selectedClass;
     })
   }
 

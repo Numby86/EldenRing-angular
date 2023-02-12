@@ -2,25 +2,73 @@
 class="weaponDET"
 >
     <div
+    (click)="backToList()"
     class="weaponDET__card"
     *ngIf="weapon"
     >
-        <img 
-        class="weaponDET__card-image"
-        [src]="weapon.data.image" 
-        alt="imagen {{ weapon.data.name }}">
+        <div
+        class="weaponDET__card-imageStats"
+        >
+            <img 
+            class="weaponDET__card-image"
+            [src]="weapon.data.image" 
+            alt="imagen {{ weapon.data.name }}">
+            <div
+            class="weaponDET__card-dropsStats"
+            >
+                <p
+                class="weaponDET__card-scales"
+                >SCALES: </p>
+                <p
+                >{{ weapon.data.scalesWith[0].name }}: {{ weapon.data.scalesWith[0].scaling }}</p>
+                <p
+                *ngIf="weapon.data.scalesWith[1]"
+                >{{ weapon.data.scalesWith[1].name }}: {{ weapon.data.scalesWith[1].scaling }}</p>
+                <p
+                *ngIf="weapon.data.scalesWith[2]"
+                >{{ weapon.data.scalesWith[2].name }}: {{ weapon.data.scalesWith[2].scaling }}</p>
+                <p
+                *ngIf="weapon.data.scalesWith[3]"
+                >{{ weapon.data.scalesWith[3].name }}: {{ weapon.data.scalesWith[3].scaling }}</p>
+                <p
+                *ngIf="weapon.data.scalesWith[4]"
+                >{{ weapon.data.scalesWith[4].name }}: {{ weapon.data.scalesWith[4].scaling }}</p>
+                <p
+                class="weaponDET__card-category"
+                >CATEGORY: {{ weapon.data.category }}</p>
+            </div>
+        </div>
         <div
         class="weaponDET__card-text"
         >
             <p
             class="weaponDET__card-name"
             >{{ weapon.data.name }}</p>
-            <p
-            class="weaponDET__card-category"
-            >{{ weapon.data.category }}</p>
+            <div
+            class="weaponDET__card-requiredAttributes"
+            >
+                <p
+                >REQUIRED: {{ weapon.data.requiredAttributes[0].name }}:{{ weapon.data.requiredAttributes[0].amount }} </p>
+                <p
+                *ngIf="weapon.data.requiredAttributes[1]"
+                >| {{ weapon.data.requiredAttributes[1].name }}:{{ weapon.data.requiredAttributes[1].amount }} </p>
+                <p
+                *ngIf="weapon.data.requiredAttributes[2]"
+                >| {{ weapon.data.requiredAttributes[2].name }}:{{ weapon.data.requiredAttributes[2].amount }} </p>
+                <p
+                *ngIf="weapon.data.requiredAttributes[3]"
+                >| {{ weapon.data.requiredAttributes[3].name }}:{{ weapon.data.requiredAttributes[3].amount }} </p>
+                <p
+                *ngIf="weapon.data.requiredAttributes[4]"
+                >| {{ weapon.data.requiredAttributes[4].name }}:{{ weapon.data.requiredAttributes[4].amount }}</p>
+            </div>
             <p
             class="weaponDET__card-description"
             >{{ weapon.data.description }}</p>
         </div>
     </div>
+    <button
+    class="btn"
+    (click)="backToList()"
+    >GO LIST</button>
 </div>

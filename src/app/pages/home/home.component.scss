@@ -1,27 +1,15 @@
-.main{
-    background-color: red;
-    left: 300px;
-    width: 100%;
-    width: calc(100% - 60%);
-    margin-left: 6%;
-    gap: 10px;
+.home{
+    background-color: #77694d;
+    height: 775px;
+    width: calc(100% - 62%);
+    margin-left: 5%;
+    color: black;
     display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    &__h1{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        width: calc(100% - 60%);
-        margin-left: 8%;
-    }
-    &__card{
-        background-color: rgba(0, 0, 0, 0.7);
-    }
-    &__card-image{
-        width: 135px;
-        height: 199.5px;
-        border: 1px solid;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    &__image{
+        width: 877px;
+        height: 480px;
     }
 }

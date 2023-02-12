@@ -34,4 +34,6 @@ export class BossesService {
       tap(() => this.loaderService.hideLoading())
     )
   }
+
+  
 }

@@ -1,9 +1,16 @@
 <div
 class="bosses"
 >
+    <input
+    class="ipt"
+    type="text" 
+    placeholder="Buscar arma"
+    #txtSearch
+    (keyup)="onSearchBosses( txtSearch.value )"
+    />
     <div
     class="bosses__card"
-    *ngFor="let boss of bosses; let i = index"
+    *ngFor="let boss of bosses | pagination:pagina:search" 
     >
         <div
         (click)="goToDetail(boss.id)"
@@ -11,7 +18,21 @@ class="bosses"
         >
             <p
             class="bosses__card-list"
-            >{{ i + 1 }} - {{ boss.name }}</p>
+            >{{ boss.name }}</p>
         </div>
+    </div>
+    <div
+    class="bosses__buttons"
+    >
+        <button
+        [ngStyle]="pagina <= 0 ? {'display': 'none'} : null"
+        (click)="prevPage()"
+        class="btn"
+        >PREVIOUS</button>
+        <button
+        [ngStyle]="pagina >= 80 ? {'display': 'none'} : null"
+        (click)="nextPage()"
+        class="btn"
+        >NEXT</button>
     </div>
 </div>

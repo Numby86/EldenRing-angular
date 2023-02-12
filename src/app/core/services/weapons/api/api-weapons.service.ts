@@ -5,7 +5,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 const API_WEAPON_URL = 'https://eldenring.fanapis.com/api/weapons';
-const limit = '?limit=50&page=5';
+const limit = '?limit=100';
+const pages = '&page=5'
 
 @Injectable({
   providedIn: 'root'

@@ -59,7 +59,7 @@ class="create"
             <option
             class="create__form-option"
             *ngFor="let complexion of complexiones" 
-            value="complexion">{{ complexion }}</option>
+            [value]="complexion">{{ complexion }}</option>
         </select>
         <p
         *ngIf="!createForm.get('complexion')?.valid 
@@ -77,7 +77,7 @@ class="create"
             <option
             class="create__form-option"
             *ngFor="let recuerdo of recuerdos" 
-            value="recuerdo">{{ recuerdo }}</option>
+            [value]="recuerdo">{{ recuerdo }}</option>
         </select>
         <p
         *ngIf="!createForm.get('recuerdo')?.valid 
@@ -89,13 +89,14 @@ class="create"
         class="create__form-clase"
         name="clase" 
         formControlName="clase">
-            <option 
-            class="create__form-option"
-            default value="">Clase</option>
             <option
             class="create__form-option"
-            *ngFor="let clase of clases" 
-            value="clase">{{ clase }}</option>
+            default
+            value=''>Clase</option>
+            <option
+            class="create__form-option"
+            *ngFor="let clase of claseName"
+            [value]="clase">{{ clase }}</option>
         </select>
         <p
         *ngIf="!createForm.get('clase')?.valid 
@@ -109,4 +110,29 @@ class="create"
         [ngStyle]="{color: !createForm.valid && createForm.touched ? 'red' : 'black'}"
         class="btn"> CREATE </button>
     </form>
+    <div
+    class="create__class"
+    >
+        <img
+            *ngIf="eleccion"
+            class='create__class-image'
+            [src]="eleccion.image" 
+            alt="eleccion.image">
+        <div
+        *ngIf="eleccion"
+        class="create__class-stats"
+        >
+            <p
+            class="create__class-level"
+            >NIVEL &nbsp; {{eleccion.stats.level}}</p>
+            <p>Vigor&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{eleccion.stats.vigor}}</p>
+            <p>Mente&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{eleccion.stats.mind}}</p>
+            <p>Aguante&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;  {{eleccion.stats.endurance}}</p>
+            <p>Fuerza&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; {{eleccion.stats.strength}}</p>
+            <p>Destreza&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{eleccion.stats.dexterity}}</p>
+            <p>Inteligencia&nbsp; &nbsp; &nbsp;{{eleccion.stats.intelligence}}</p>
+            <p>Fe&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{eleccion.stats.faith}}</p>
+            <p>Arcano&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; {{eleccion.stats.arcane}}</p>
+        </div>
+    </div>
 </div>

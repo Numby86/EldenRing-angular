@@ -17,6 +17,9 @@ export class BossesComponent implements OnInit {
       private bossesService: BossesService
     ){}
 
+    public pagina: number = 0;
+    public search: string = '';
+
     public ngOnInit(): void {
       this.bossesService.getBosses().subscribe((bossesFromApi) => {
         this.bosses = bossesFromApi;
@@ -27,6 +30,22 @@ export class BossesComponent implements OnInit {
       if(this.bosses) {
         this.router.navigate(['bosses-detail', id])
       }
+    }
+
+    public prevPage(){
+      if(this.pagina > 0){
+        this.pagina -= 20;
+      }
+    }
+
+    public nextPage(){
+      if (this.pagina < 80) {
+        this.pagina += 20;
+      }
+    }
+
+    public onSearchBosses(search: string){
+      this.search = search;
     }
 
   }

@@ -1,4 +1,4 @@
-export const clase = [
+export const claseName = [
   'Hero',
   'Warrior',
   'Astrologer',

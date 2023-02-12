@@ -2,6 +2,7 @@
 class="header"
 >
     <img 
+        (click)="goHome()"
         class="header__logo"
         src="../../../../assets/images/eldenring-opensource-logo.png"
         alt="logo Elden"
@@ -34,6 +35,10 @@ class="header"
         routerLinkActive="active"
         class="nav-main__link-item">HOME</a>
         <a
+        [routerLink]="['create-character']"
+        routerLinkActive="active"
+        class="nav-main__link-item">CREAR</a>
+        <a
         [routerLink]="['bosses']"
         routerLinkActive="active"
         class="nav-main__link-item">BOSSES</a>
@@ -45,10 +50,6 @@ class="header"
         [routerLink]="['items']"
         routerLinkActive="active"
         class="nav-main__link-item">ITEMS</a>
-        <a
-        [routerLink]="['create-character']"
-        routerLinkActive="active"
-        class="nav-main__link-item">CREAR</a>
     </div>
 </nav>
 
