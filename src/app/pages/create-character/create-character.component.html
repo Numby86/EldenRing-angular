@@ -88,7 +88,7 @@ class="create"
         <select
         class="create__form-clase"
         name="clase" 
-        formControlName="clase">
+        formControlName="claseName">
             <option
             class="create__form-option"
             default
@@ -99,16 +99,16 @@ class="create"
             [value]="clase">{{ clase }}</option>
         </select>
         <p
-        *ngIf="!createForm.get('clase')?.valid 
-            && createForm.get('clase')?.touched  
-            && createForm.get('clase')?.errors?.['required']"
+        *ngIf="!createForm.get('claseName')?.valid 
+            && createForm.get('claseName')?.touched  
+            && createForm.get('claseName')?.errors?.['required']"
         class="create__form-error"
         >El valor de este campo es obligatorio</p>
         <button
         type="submit"
         [disabled]="!createForm.valid"
         [ngStyle]="{color: !createForm.valid && createForm.touched ? 'red' : 'black'}"
-        class="btn"> CREATE </button>
+        class="btn"> {{ editForm ? 'EDIT' : 'CREATE' }} </button>
     </form>
     <div
     class="create__class"

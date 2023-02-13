@@ -20,6 +20,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/bosses-detail/bosses-detail.module').then(m => m.BossesDetailModule)
   }, 
   {
+    path: 'characters',
+    loadChildren: () => import('./pages/characters/character.module').then(m => m.CharacterModule)
+  },
+  {
+    path: 'character-detail/:id',
+    loadChildren: () => import('./pages/characters-detail/characters-detail.module').then(m => m.CharactersDetailModule)
+  },
+  {
     path: 'create-character',
     loadChildren: () => import('./pages/create-character/create-character.module').then(m => m.CreateCharacterModule)
   },

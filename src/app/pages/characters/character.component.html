@@ -1,0 +1,30 @@
+<div
+class="characters"
+>
+    <div
+    class="characters__card"
+    *ngFor="let character of characters"
+    >
+        <div
+        (click)="goToDetail(character._id)"
+        class="characters__card-data"
+        >
+            <img
+            class="characters__card-image"
+            [src]="character.image || 'https://img.icons8.com/cotton/512/gender-neutral-user--v1.png'" 
+            
+            alt={{character.name}}>
+            <p
+                class="characters__card-name"
+                >{{ character.name }}</p>
+                <p
+                class="characters__card-claseName"
+                >{{ character.claseName }}</p>
+            <!-- <button
+                (click)="deleteCharacter(character._id)"
+                class="btn"
+                >BORRAR</button> -->
+        </div>
+        
+    </div>
+</div>

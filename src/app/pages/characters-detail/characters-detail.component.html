@@ -1,0 +1,57 @@
+<div
+class="characterDET"
+>
+    <div
+    class="characterDET__card"
+    *ngIf="character"
+    >
+        <div
+        class="characterDET__card-imageStats"
+        >
+            <img 
+            class="characterDET__card-image"
+            [src]="character.image || 'https://img.icons8.com/cotton/512/gender-neutral-user--v1.png'" 
+            alt="imagen {{ character.name }}">
+            
+            <div
+            class="characterDET__card-datos"
+            >
+            <div
+            class="characterDET__card-nomEdad"
+            >
+                <p
+                class="characterDET__card-nombre"
+                >Nombre: {{ character.name }}</p>
+                <p
+                class="characterDET__card-edad"
+                >Edad: {{ character.edad }}</p>
+            </div>
+            <div
+            class="characterDET__card-buttons"
+            >
+                <button
+                (click)="editCharacter()"
+                class="btn"
+                >EDITAR</button>
+            </div>
+            </div>
+        </div>
+        <div
+        class="characterDET__card-text"
+        >
+            <p
+            class="characterDET__card-claseName"
+            >Clase: {{ character.claseName }}</p>
+            <p
+            class="characterDET__card-complexion"
+            >Complexion: {{ character.complexion }}</p>
+            <p
+            class="characterDET__card-recuerdo"
+            >Recuerdo: {{ character.recuerdo }}</p>
+        </div>
+    </div>
+    <button
+        class="btn"
+        (click)="backToList()"
+    >GO LIST</button>
+</div>

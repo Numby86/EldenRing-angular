@@ -14,6 +14,8 @@ export class HomeComponent implements OnInit {
 
   public locations = myLocations;
 
+  public myNumber:number = 0;
+
   constructor(
     private locationsService: LocationsService
   ){}
@@ -26,10 +28,10 @@ export class HomeComponent implements OnInit {
     //   this.locations = locaFromApi;
     // })
 
-    setInterval(() => {
-      console.log('cada 3 seguntos');
-      
-    }, 3000);
+    // setInterval(() => {
+    //   const randomNuber = () => Math.floor(Math.random() * 10) + 1;
+    //   this.myNumber = randomNuber();
+    // }, 3000);
   }
 
 }
