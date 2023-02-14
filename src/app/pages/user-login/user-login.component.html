@@ -1,0 +1,32 @@
+<div
+class="login"
+>
+    <form
+    *ngIf="logForm"
+    (submit)="sendFormulario()"
+    class="login__form"
+    [formGroup]="logForm"
+    >
+        <input
+        name="email"
+        formControlName="email"
+        placeholder="Introduzca su email" 
+        class="login__form-email"
+        type="text">
+        <input
+        name="password"
+        formControlName="password"
+        placeholder="Introduzca su contraseña" 
+        class="login__form-password"
+        type="password">
+        <button
+        [disabled]="!logForm.valid"
+        type="submit"
+        class="btn">ENVIAR</button>
+    </form>
+    <h3
+    class="login-notUser"
+    >Aun no eres usuario? <a 
+                            (click)="goToRegister()"
+                            >REGISTRATE</a> </h3>
+</div>

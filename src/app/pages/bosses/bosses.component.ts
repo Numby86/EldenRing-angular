@@ -14,7 +14,7 @@ export class BossesComponent implements OnInit {
 
     constructor(
       private router: Router,
-      private bossesService: BossesService
+      private bossesService: BossesService,
     ){}
 
     public pagina: number = 0;

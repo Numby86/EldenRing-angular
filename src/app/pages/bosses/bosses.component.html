@@ -10,7 +10,7 @@ class="bosses"
     />
     <div
     class="bosses__card"
-    *ngFor="let boss of bosses | pagination:pagina:search" 
+    *ngFor="let boss of bosses | pagination:pagina" 
     >
         <div
         (click)="goToDetail(boss.id)"

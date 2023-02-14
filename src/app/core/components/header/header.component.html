@@ -8,6 +8,21 @@ class="header"
         alt="logo Elden"
     />
 </div>
+<div
+*ngIf="logged"
+class="logout"
+>
+    <img
+    (click)="addButton()"
+    class="runa" 
+    src="../../../../assets/images/eldenring-rune-icon.png" 
+    alt="runa logged">
+    <button
+    (click)="cerrarSesion()"
+    *ngIf="logOut"
+    class="btn"
+    >LOGOUT</button>
+</div>
 <nav class="nav-main">
     <input
     type="checkbox"
@@ -24,10 +39,16 @@ class="header"
     </label>
     <div class="nav-main__btn-collapse-bg"></div>
     <div class="social-networks">
-        <a href="https://github.com/Numby86" target="blank" class="social-networks__link-item">
-            <i class="fa-brands fa-github"></i></a>
-        <a href="https://github.com/Numby86" target="blank" class="social-networks__link-item">
-            <i class="fa-brands fa-linkedin"></i></a>
+        <a 
+        [routerLink]="['login']"
+        routerLinkActive="active2"
+        class="social-networks__link-item">
+            <i class="fa-solid fa-user"></i></a>
+        <a
+        [routerLink]="['register']"
+        routerLinkActive="active2"
+        class="social-networks__link-item">
+            <i class="fa-sharp fa-solid fa-users"></i></a>
     </div>
     <div class="nav-main__menu">
         <a
@@ -56,33 +77,3 @@ class="header"
         class="nav-main__link-item">ITEMS</a>
     </div>
 </nav>
-
-
-
-
-<!-- <div
-    class="menu"
->
-    <img 
-        class="menu__image"
-        src="../../../../assets/images/eldenring-rune-icon.png"
-        alt="runa Elden"
-        />
-    <ul
-    class="menu__ul"
-    >
-        <span class="fa-solid fa-bars"></span>
-        <li
-        class="menu__ul_li"
-        ><a href="">Home</a></li>
-        <li
-        class="menu__ul_li"
-        ><a href="">Personajes</a></li>
-        <li
-        class="menu__ul_li"
-        ><a href="">Armas</a></li>
-        <li
-        class="menu__ul_li"
-        ><a href="">Crea</a></li>
-    </ul>
-</div> -->

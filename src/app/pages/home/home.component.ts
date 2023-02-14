@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { myLocations } from './../../core/services/locations/locations.data';
 import { Locations } from '../../core/services/locations/locations.data';
 import { LocationsService } from './../../core/services/locations/locations.service';
@@ -17,7 +18,8 @@ export class HomeComponent implements OnInit {
   public myNumber:number = 0;
 
   constructor(
-    private locationsService: LocationsService
+    private locationsService: LocationsService,
+    private router: Router
   ){}
 
   
@@ -34,4 +36,7 @@ export class HomeComponent implements OnInit {
     // }, 3000);
   }
 
+  public goToRegister (){
+    this.router.navigate(['register'])
+  }
 }

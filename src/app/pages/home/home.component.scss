@@ -2,7 +2,7 @@
     background-color: rgba(0, 0, 0, 0.8);
     height: 775px;
     width: calc(100% - 60%);
-    margin-left: 9.2%;
+    margin-left: 9.4%;
     color: black;
     display: flex;
     justify-content: start;
@@ -22,10 +22,22 @@
     &__title{
         font-size: 24px;
         color: #c4b59a;
+        margin-top: 10px;
     }
     &__text{
         color: #c4b59a;
         font-size: 20px;
-        margin: 5px auto;
+        margin-left: 12px;
+        margin-top: 10px;
     }
+    & a{
+        padding: 2px;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover{
+            color: black;
+            background-color: #ab966f;
+        }
+    }
+    
 }

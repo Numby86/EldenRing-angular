@@ -1,0 +1,45 @@
+<div
+class="register"
+>
+    <form
+    *ngIf="regForm"
+    (submit)="sendFormulario()"
+    class="register__form"
+    [formGroup]="regForm"
+    >
+        <input
+        name="name"
+        formControlName="name"
+        placeholder="Introduzca su nombre" 
+        class="register__form-name"
+        type="text">
+        <input
+        name="surname"
+        formArrayName="surname"
+        placeholder="Introduzca sus apellidos" 
+        class="register__form-surname"
+        type="text">
+        <input
+        name="phone"
+        formControlName="phone"
+        placeholder="Introduzca su telefono" 
+        class="register__form-phone"
+        type="text">
+        <input
+        name="email"
+        formControlName="email"
+        placeholder="Introduzca su email" 
+        class="register__form-email"
+        type="text">
+        <input
+        name="password"
+        formControlName="password"
+        placeholder="Introduzca su contraseña" 
+        class="register__form-password"
+        type="password">
+        <button
+        [disabled]="!regForm.valid"
+        type="submit"
+        class="btn">ENVIAR</button>
+    </form>
+</div>

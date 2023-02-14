@@ -36,6 +36,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/items/items.module').then(m => m.ItemsModule)
   },
   {
+    path: 'login',
+    loadChildren: () => import('./pages/user-login/user-login.module').then(m => m.UserLoginModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./pages/user-register/user-register.module').then(m => m.UserRegisterModule)
+  },
+  {
     path: 'weapons',
     loadChildren: () => import('./pages/weapons/weapons.module').then(m => m.WeaponsModule)
   },

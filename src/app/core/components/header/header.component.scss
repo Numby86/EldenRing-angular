@@ -74,9 +74,9 @@
         }
     }
 }
-.fa-brands{
+.fa-solid{
     font-weight: bold;
-    font-size: 20px;
+    font-size: 24px;
     &:hover{
         color: rgb(200, 200, 200);
     }
@@ -147,7 +147,30 @@
 }
 .active{
     color: rgb(200, 200, 200);
-    border-bottom: 1.5px solid rgb(200, 200, 200);
-    border-top: 1.5px solid rgb(200, 200, 200);
+    border-bottom: 2px solid rgb(200, 200, 200);
+    border-top: 2px solid rgb(200, 200, 200);
     width: min-content;
+}
+.active2{
+    color: rgb(200, 200, 200);
+    border-bottom: 2px solid rgb(200, 200, 200);
+    width: min-content;
+}
+.logout{
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+}
+.runa{
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    box-shadow: #ab966f;
+    padding: 3px;
+    box-shadow: 0 0 15px #c4b59a;
+}
+.none{
+    display: none;
 }
