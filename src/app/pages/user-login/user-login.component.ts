@@ -26,18 +26,24 @@ export class UserLoginComponent {
 
     this.logForm = this.fb.group({
 
-      email: new FormControl('', [Validators.required]),
-      password: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(12)])
+      email: new FormControl('', [Validators.required, Validators.pattern(email)]),
+      password: new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(12)])
     })
   }
 
   public sendFormulario (){
 
-    const user = this.logForm?.value;
-
     if(!this.logForm?.valid){return;}
-    this.apiUserService.loginApiUser(user).subscribe();
-    this.router.navigate(['home']);
+    const user: Login = this.logForm?.value;
+
+    this.apiUserService.loginApiUser(user).subscribe({
+      next: (res) => {this.router.navigate(['create-character'])
+      },
+      error: (err) => {
+        this.userError = err.error;
+        this.logForm?.reset()
+      } 
+    });
   }
 
   public goToRegister (){

@@ -1,0 +1,42 @@
+<div
+class="incantations"
+>
+    <div
+    *ngFor="let incantation of incantations | pagination:pagina"
+    class="incantations__card">
+        <img
+        class="incantations__card-image"
+        [src]="incantation.image" 
+        alt={{incantation.name}}>
+        <p
+        class="incantations__card-name"
+        >
+            {{incantation.name}}
+        </p>
+        <p
+        class="incantations__card-effect"
+        >
+            {{incantation.effects}}
+        </p>
+        <p
+        class="incantations__card-description"
+        >
+            {{incantation.description}}
+        </p>
+    </div>
+    
+</div>
+<div
+    class="incantations__buttons"
+    >
+        <button
+        [ngStyle]="pagina <= 0 ? {'display': 'none'} : null"
+        (click)="prevPage()"
+        class="btn"
+        >PREVIOUS</button>
+        <button
+        [ngStyle]="pagina >= 80 ? {'display': 'none'} : null"
+        (click)="nextPage()"
+        class="btn"
+        >NEXT</button>
+    </div>

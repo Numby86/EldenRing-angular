@@ -41,4 +41,5 @@ export class CharacterComponent implements OnInit {
     console.log(this.listCharacters$);
     
   }
+
 }

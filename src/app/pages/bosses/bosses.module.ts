@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 
 import { BossesRoutingModule } from './bosses-routing.module';
 import { BossesComponent } from './bosses.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -16,7 +17,8 @@ import { BossesComponent } from './bosses.component';
     CommonModule,
     BossesRoutingModule,
     RouterModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ]
 })
 export class BossesModule { }

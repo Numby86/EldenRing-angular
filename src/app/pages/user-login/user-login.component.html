@@ -13,12 +13,41 @@ class="login"
         placeholder="Introduzca su email" 
         class="login__form-email"
         type="text">
+        <p
+    *ngIf="!logForm.get('email')?.valid 
+      && logForm.get('email')?.dirty 
+      && logForm.get('email')?.errors?.['required']"
+  >El valor está requerido</p>
+  <p
+    *ngIf="!logForm.get('email')?.valid 
+      && logForm.get('email')?.touched 
+      && logForm.get('email')?.errors?.['pattern']"
+  >No es un formato de email valido</p>
         <input
         name="password"
         formControlName="password"
         placeholder="Introduzca su contraseña" 
         class="login__form-password"
         type="password">
+        <p
+    *ngIf="!logForm.get('password')?.valid 
+      && logForm.get('password')?.dirty 
+      && logForm.get('password')?.errors?.['required']"
+  >El valor está requerido</p>
+  <p
+    *ngIf="!logForm.get('password')?.valid 
+      && logForm.get('password')?.dirty 
+      && logForm.get('password')?.errors?.['maxlength']"
+  >La contraseña debe tener entre 4 y 12 caracteres</p>
+  <p
+    *ngIf="!logForm.get('password')?.valid 
+      && logForm.get('password')?.touched  
+      && logForm.get('password')?.errors?.['minlength']"
+  >La contraseña debe tener entre 4 y 12 caracteres</p>
+        <p 
+        *ngIf="userError"
+        class="login__form-error"
+        >{{ userError }}</p>
         <button
         [disabled]="!logForm.valid"
         type="submit"

@@ -1,6 +1,6 @@
 import { CharacterService } from './../../core/services/crateCharacter/character.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ResCharacter } from './../../core/services/crateCharacter/res-character.model';
+import { ResCharacter, CompleteCharacter } from './../../core/services/crateCharacter/res-character.model';
 import { Component } from '@angular/core';
 import { map, switchMap, Observable } from 'rxjs';
 
@@ -11,7 +11,7 @@ import { map, switchMap, Observable } from 'rxjs';
 })
 export class CharactersDetailComponent {
 
-  public character?: ResCharacter;
+  public character?: CompleteCharacter;
  
 
   constructor(

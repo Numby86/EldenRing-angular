@@ -11,6 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class WeaponsComponent implements OnInit {
 
   public weapons: ApiWeapon[] = [];
+  public searchName: string = '';
 
   constructor(
     private weaponsService: WeaponsService,
@@ -26,6 +27,20 @@ export class WeaponsComponent implements OnInit {
   public goToDetail(id: string){
     if(this.weapons) {
       this.router.navigate(['weapons-detail', id])
+    }
+  }
+
+  public pagina: number = 0;
+
+  public prevPage(){
+    if(this.pagina > 0){
+      this.pagina -= 20;
+    }
+  }
+
+  public nextPage(){
+    if (this.pagina < 80) {
+      this.pagina += 20;
     }
   }
 }

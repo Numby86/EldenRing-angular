@@ -19,3 +19,10 @@ export interface Stats {
     faith:        number;
     arcane:       number;
 }
+
+export interface ClasesDetail {
+    _id?:         string;
+    name:        string;
+    image?:       string;
+    description?: string;
+}

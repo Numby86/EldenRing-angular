@@ -23,8 +23,11 @@
             margin-top: 150px;
         }
         &-error{
+            border-radius: 5px;
+            padding: 5px;
             font-size: 14px;
             font-weight: bold;
+            box-shadow: 0 0 35px #ab966f;
         }
         & input {
             font-weight: bold;

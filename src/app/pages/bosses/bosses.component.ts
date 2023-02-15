@@ -18,7 +18,7 @@ export class BossesComponent implements OnInit {
     ){}
 
     public pagina: number = 0;
-    public search: string = '';
+    public searchName: string = '';
 
     public ngOnInit(): void {
       this.bossesService.getBosses().subscribe((bossesFromApi) => {
@@ -44,8 +44,10 @@ export class BossesComponent implements OnInit {
       }
     }
 
-    public onSearchBosses(search: string){
-      this.search = search;
-    }
+    // public onSearchBosses(search: string){
+    //   this.search = search;
+    //   #txtSearch
+    //   (keyup)="onSearchBosses( txtSearch.value )"
+    // }
 
   }

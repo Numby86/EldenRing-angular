@@ -45,7 +45,8 @@ export class CreateCharacterComponent implements OnInit {
           return this.characterService.getCharacterDetail(id)
         }
       })
-    ).subscribe((character?: ResCharacter) => {
+    )
+    .subscribe((character?: ResCharacter) => {
       this.editForm = !!character;
       this.createCharacterForm(character);
     })

@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   public logged: boolean = false;
+  
   public logOut: boolean = false;
 
   constructor(

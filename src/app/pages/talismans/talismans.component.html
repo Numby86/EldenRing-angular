@@ -1,0 +1,42 @@
+<div
+class="talismans"
+>
+    <div
+    *ngFor="let talisman of talismans | pagination:pagina"
+    class="talismans__card">
+        <img
+        class="talismans__card-image"
+        [src]="talisman.image" 
+        alt={{talisman.name}}>
+        <p
+        class="talismans__card-name"
+        >
+            {{talisman.name}}
+        </p>
+        <p
+        class="talismans__card-effect"
+        >
+            {{talisman.effect}}
+        </p>
+        <p
+        class="talismans__card-description"
+        >
+            {{talisman.description}}
+        </p>
+    </div>
+    
+</div>
+<div
+    class="talismans__buttons"
+    >
+        <button
+        [ngStyle]="pagina <= 0 ? {'display': 'none'} : null"
+        (click)="prevPage()"
+        class="btn"
+        >PREVIOUS</button>
+        <button
+        [ngStyle]="pagina >= 80 ? {'display': 'none'} : null"
+        (click)="nextPage()"
+        class="btn"
+        >NEXT</button>
+    </div>

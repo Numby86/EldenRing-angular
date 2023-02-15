@@ -5,12 +5,11 @@ class="bosses"
     class="ipt"
     type="text" 
     placeholder="Buscar ..."
-    #txtSearch
-    (keyup)="onSearchBosses( txtSearch.value )"
+    [(ngModel)]="searchName"
     />
     <div
     class="bosses__card"
-    *ngFor="let boss of bosses | pagination:pagina" 
+    *ngFor="let boss of bosses | pagination:pagina | search:searchName"
     >
         <div
         (click)="goToDetail(boss.id)"

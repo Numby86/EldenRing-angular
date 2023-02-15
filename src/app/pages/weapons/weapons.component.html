@@ -1,9 +1,15 @@
 <div
 class="weapons"
 >
+    <input
+    class="ipt"
+    type="text" 
+    placeholder="Buscar ..."
+    [(ngModel)]="searchName"
+    />
     <div
     class="weapons__card"
-    *ngFor="let weapon of weapons; let i = index"
+    *ngFor="let weapon of weapons | pagination:pagina | searchWeapons:searchName"
     >
         <div
         (click)="goToDetail(weapon.id)"
@@ -11,7 +17,21 @@ class="weapons"
         >
             <p
             class="weapons__card-list"
-            >{{ i + 1 }} - {{ weapon.name }}</p>
+            >{{ weapon.name }}</p>
         </div>
+    </div>
+    <div
+    class="weapons__buttons"
+    >
+        <button
+        [ngStyle]="pagina <= 0 ? {'display': 'none'} : null"
+        (click)="prevPage()"
+        class="btn"
+        >PREVIOUS</button>
+        <button
+        [ngStyle]="pagina >= 80 ? {'display': 'none'} : null"
+        (click)="nextPage()"
+        class="btn"
+        >NEXT</button>
     </div>
 </div>

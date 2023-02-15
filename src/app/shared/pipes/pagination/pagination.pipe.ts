@@ -1,4 +1,3 @@
-import { Bosses } from './../../../core/services/bosses/Bosses.model';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({

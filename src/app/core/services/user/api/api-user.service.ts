@@ -11,6 +11,7 @@ const API_URL_LOGIN_JWT = 'https://nodejs-proyectodb-mpl0haqpi-numby86.vercel.ap
 
 const TOKEN_KEY = 'user-token';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -21,7 +22,9 @@ export class ApiUserService {
   constructor(
     private http: HttpClient,
     private router: Router
-  ) { }
+  ) { 
+    this.userLogged$.next(this.isLogged());
+   }
 
   public registerApiUser(body: Register): Observable<Register>{
     return this.http.post<Register>(`${API_URL_REGISTER}`, body)
@@ -43,7 +46,7 @@ export class ApiUserService {
   }
 
   public logoutUser(){
-    const deleteToken = localStorage.getItem(TOKEN_KEY);
+    const deleteToken = localStorage.removeItem(TOKEN_KEY);
     this.userLogged$.next(false);
     if(deleteToken !== null){
       this.router.navigate(['home']);
@@ -54,12 +57,12 @@ export class ApiUserService {
     const checkToken = localStorage.getItem(TOKEN_KEY);
     if (!checkToken){return false;}
     const validToken = JSON.parse(checkToken)?.token;
-    return validToken;
+    return !!validToken;
   }
 
   public getToken(): string | null {
     const checkToken = localStorage.getItem(TOKEN_KEY);
-    return checkToken ? JSON.parse(checkToken)?.token : null;
+    return checkToken ? JSON.parse(checkToken).token : null;
   }
 
 

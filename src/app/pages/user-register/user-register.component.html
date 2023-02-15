@@ -13,6 +13,11 @@ class="register"
         placeholder="Introduzca su nombre" 
         class="register__form-name"
         type="text">
+        <p
+      *ngIf="!regForm.get('name')?.valid 
+        && regForm.get('name')?.dirty  
+        && regForm.get('name')?.errors?.['required']"
+    >El valor está requerido</p>
         <input
         name="surname"
         formArrayName="surname"
@@ -25,18 +30,62 @@ class="register"
         placeholder="Introduzca su telefono" 
         class="register__form-phone"
         type="text">
+        <p
+    *ngIf="!regForm.get('phone')?.valid 
+      && regForm.get('phone')?.touched 
+      && regForm.get('phone')?.errors?.['minlength']"
+  >El telefono debe 9 caracteres</p>
+  <p
+    *ngIf="!regForm.get('phone')?.valid 
+      && regForm.get('phone')?.dirty 
+      && regForm.get('phone')?.errors?.['maxlength']"
+  >El telefono debe 9 caracteres</p>
+  <p
+    *ngIf="!regForm.get('phone')?.valid 
+      && regForm.get('phone')?.dirty 
+      && regForm.get('phone')?.errors?.['pattern']"
+  >Solo se pueden usar numeros en este campo</p>
         <input
         name="email"
         formControlName="email"
         placeholder="Introduzca su email" 
         class="register__form-email"
         type="text">
+        <p
+    *ngIf="!regForm.get('email')?.valid 
+      && regForm.get('email')?.dirty 
+      && regForm.get('email')?.errors?.['required']"
+  >El valor está requerido</p>
+  <p
+    *ngIf="!regForm.get('email')?.valid 
+      && regForm.get('email')?.touched 
+      && regForm.get('email')?.errors?.['pattern']"
+  >No es un formato de email valido</p>
         <input
         name="password"
         formControlName="password"
         placeholder="Introduzca su contraseña" 
         class="register__form-password"
         type="password">
+        <p
+    *ngIf="!regForm.get('password')?.valid 
+      && regForm.get('password')?.dirty 
+      && regForm.get('password')?.errors?.['required']"
+  >El valor está requerido</p>
+  <p
+    *ngIf="!regForm.get('password')?.valid 
+      && regForm.get('password')?.dirty 
+      && regForm.get('password')?.errors?.['maxlength']"
+  >La contraseña debe tener entre 4 y 12 caracteres</p>
+  <p
+    *ngIf="!regForm.get('password')?.valid 
+      && regForm.get('password')?.touched  
+      && regForm.get('password')?.errors?.['minlength']"
+  >La contraseña debe tener entre 4 y 12 caracteres</p>
+        <p 
+        *ngIf="userError"
+        class="register__form-error"
+        >{{ userError }}</p>
         <button
         [disabled]="!regForm.valid"
         type="submit"

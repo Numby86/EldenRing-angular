@@ -1,24 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PaginationPipe } from './pipes/pagination/pagination.pipe';
-import { RandomPipe } from './pipes/random/random.pipe';
 import { PaginationComponent } from './components/pagination/pagination.component';
+import { SearchPipe } from './pipes/search/search.pipe';
+import { SearchWeaponsPipe } from './pipes/search/search-weapons.pipe';
 
 
 
 @NgModule({
   declarations: [
     PaginationPipe,
-    RandomPipe,
-    PaginationComponent
+    PaginationComponent,
+    SearchPipe,
+    SearchWeaponsPipe
   ],
   imports: [
     CommonModule
   ],
   exports: [
     PaginationPipe,
-    RandomPipe,
-    PaginationComponent
+    PaginationComponent,
+    SearchPipe,
+    SearchWeaponsPipe
   ]
 })
 export class SharedModule { }

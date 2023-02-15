@@ -39,9 +39,13 @@ class="characterDET"
         <div
         class="characterDET__card-text"
         >
+            <img 
+            class="characterDET__card-imageClase"
+            [src]="character.clases.image" 
+            alt="imagen {{character.clases.name}}">
             <p
             class="characterDET__card-claseName"
-            >Clase: {{ character.claseName }}</p>
+            >Clase: {{ character.clases.name }}</p>
             <p
             class="characterDET__card-complexion"
             >Complexion: {{ character.complexion }}</p>

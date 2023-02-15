@@ -1,3 +1,4 @@
+import { LoggedGuard } from './pages/create-character/guards/logged.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -30,6 +31,12 @@ const routes: Routes = [
   {
     path: 'create-character',
     loadChildren: () => import('./pages/create-character/create-character.module').then(m => m.CreateCharacterModule)
+    ,
+    canActivate: [LoggedGuard]
+  },
+  {
+    path: 'incantations',
+    loadChildren: () => import('./pages/incantations/incantations.module').then(m => m.IncantationsModule)
   },
   {
     path: 'items',
@@ -42,6 +49,10 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: () => import('./pages/user-register/user-register.module').then(m => m.UserRegisterModule)
+  },
+  {
+    path: 'talismans',
+    loadChildren: () => import('./pages/talismans/talismans.module').then(m => m.TalismansModule)
   },
   {
     path: 'weapons',
