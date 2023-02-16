@@ -64,38 +64,7 @@ export const myLocations = [
         image: 'https://i0.wp.com/www.pcmrace.com/wp-content/uploads/2022/02/eldenring-2022-02-24-18-57-47-351.jpg?zoom=2&resize=750%2C400&ssl=1',
         name: 'farum'
     },
-    {
-        image: 'https://media.gamestop.com/i/gamestop/11180297_SCR15/Elden-Ring---Xbox-Series-X?$screen2x$',
-        name: 'dragon'
-    },
-    {
-        image: 'https://media.gamestop.com/i/gamestop/11180297_SCR14/Elden-Ring---Xbox-Series-X?$screen2x$',
-        name: 'tumbas'
-    },
-    {
-        image: 'https://media.gamestop.com/i/gamestop/11180297_SCR10/Elden-Ring---Xbox-Series-X?$screen2x$',
-        name: 'arbol'
-    },
-    {
-        image: 'https://media.gamestop.com/i/gamestop/11180297_SCR08/Elden-Ring---Xbox-Series-X?$screen2x$',
-        name: 'batalla atardecer'
-    },
-    {
-        image: 'https://media.gamestop.com/i/gamestop/11180297_SCR07/Elden-Ring---Xbox-Series-X?$screen2x$',
-        name: 'altus'
-    },
-    {
-        image: 'https://media.gamestop.com/i/gamestop/11180297_SCR05/Elden-Ring---Xbox-Series-X?$screen2x$',
-        name: 'gigantes'
-    },
-    {
-        image: 'https://media.gamestop.com/i/gamestop/11180297_SCR02/Elden-Ring---Xbox-Series-X?$screen2x$',
-        name: 'cuevas'
-    },
-    {
-        image: 'https://media.gamestop.com/i/gamestop/11180297_SCR01/Elden-Ring---Xbox-Series-X?$screen2x$',
-        name: 'marca dedos llama'
-    },
+
     // {
     //     image: '',
     //     name: ''

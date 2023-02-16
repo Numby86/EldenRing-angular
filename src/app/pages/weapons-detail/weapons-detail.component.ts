@@ -25,9 +25,7 @@ export class WeaponsDetailComponent {
     this.activatedRoute.params.subscribe((params) => {
       const weaponId = params['id'];
       this.weaponsService.getWeaponDetail(weaponId).subscribe((weapon) => {
-
         this.weapon = weapon;
-        
       })
     })
   }

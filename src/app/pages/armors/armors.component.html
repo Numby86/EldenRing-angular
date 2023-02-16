@@ -1,0 +1,37 @@
+<div
+class="armors"
+>
+    <input
+    class="ipt"
+    type="text" 
+    placeholder="Buscar ..."
+    [(ngModel)]="searchName"
+    />
+    <div
+    class="armors__card"
+    *ngFor="let armor of armors | pagination:pagina"
+    >
+        <div
+        (click)="goToDetail(armor.id)"
+        class="armors__card-data"
+        >
+            <p
+            class="armors__card-list"
+            >{{ armor.name }}</p>
+        </div>
+    </div>
+    <div
+    class="armors__buttons"
+    >
+        <button
+        [ngStyle]="pagina <= 0 ? {'display': 'none'} : null"
+        (click)="prevPage()"
+        class="btn"
+        >PREVIOUS</button>
+        <button
+        [ngStyle]="pagina >= 80 ? {'display': 'none'} : null"
+        (click)="nextPage()"
+        class="btn"
+        >NEXT</button>
+    </div>
+</div>

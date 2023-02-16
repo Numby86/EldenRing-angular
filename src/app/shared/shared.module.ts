@@ -4,6 +4,7 @@ import { PaginationPipe } from './pipes/pagination/pagination.pipe';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { SearchPipe } from './pipes/search/search.pipe';
 import { SearchWeaponsPipe } from './pipes/search/search-weapons.pipe';
+import { SortPipe } from './pipes/sort/sort.pipe';
 
 
 
@@ -12,7 +13,8 @@ import { SearchWeaponsPipe } from './pipes/search/search-weapons.pipe';
     PaginationPipe,
     PaginationComponent,
     SearchPipe,
-    SearchWeaponsPipe
+    SearchWeaponsPipe,
+    SortPipe
   ],
   imports: [
     CommonModule
@@ -21,7 +23,8 @@ import { SearchWeaponsPipe } from './pipes/search/search-weapons.pipe';
     PaginationPipe,
     PaginationComponent,
     SearchPipe,
-    SearchWeaponsPipe
+    SearchWeaponsPipe,
+    SortPipe
   ]
 })
 export class SharedModule { }

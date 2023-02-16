@@ -30,10 +30,10 @@ export class HomeComponent implements OnInit {
     //   this.locations = locaFromApi;
     // })
 
-    // setInterval(() => {
-    //   const randomNuber = () => Math.floor(Math.random() * 10) + 1;
-    //   this.myNumber = randomNuber();
-    // }, 3000);
+    setInterval(() => {
+      const randomNuber = () => Math.floor(Math.random() * 11) + 1;
+      this.myNumber = randomNuber();
+    }, 3000);
   }
 
   public goToRegister (){

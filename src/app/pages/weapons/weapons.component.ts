@@ -12,6 +12,7 @@ export class WeaponsComponent implements OnInit {
 
   public weapons: ApiWeapon[] = [];
   public searchName: string = '';
+  public weight: number = 0;
 
   constructor(
     private weaponsService: WeaponsService,
@@ -43,4 +44,13 @@ export class WeaponsComponent implements OnInit {
       this.pagina += 20;
     }
   }
+
+  public ordenMenMay() {
+    this.weight = 1;
+  }
+
+  public ordenMayMen(){
+    this.weight = -1;
+  }
+
 }

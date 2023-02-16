@@ -6,10 +6,23 @@ class="weapons"
     type="text" 
     placeholder="Buscar ..."
     [(ngModel)]="searchName"
+    
     />
     <div
+    class="weapons__buttons"
+    >
+        <button
+        class="btn"
+        (click)="ordenMenMay()"
+        >ASC</button>
+        <button
+        class="btn"
+        (click)="ordenMayMen()"
+        >DES</button>
+    </div>
+    <div
     class="weapons__card"
-    *ngFor="let weapon of weapons | pagination:pagina | searchWeapons:searchName"
+    *ngFor="let weapon of weapons | pagination:pagina | searchWeapons:searchName | sort:weight"
     >
         <div
         (click)="goToDetail(weapon.id)"
@@ -18,6 +31,9 @@ class="weapons"
             <p
             class="weapons__card-list"
             >{{ weapon.name }}</p>
+            <p
+            class="weapons__card-list"
+            >{{ weapon.weight }}</p>
         </div>
     </div>
     <div

@@ -27,6 +27,8 @@ export class BossesDetailComponent {
       this.bossesService.getBossDetail(bossID).subscribe((boss) => {
 
         this.boss = boss;
+        console.log(this.boss);
+        
 
       })
     })
