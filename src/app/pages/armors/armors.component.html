@@ -1,26 +1,32 @@
 <div
 class="armors"
 >
-    <input
-    class="ipt"
-    type="text" 
-    placeholder="Buscar ..."
-    [(ngModel)]="searchName"
-    />
     <div
-    class="armors__card"
     *ngFor="let armor of armors | pagination:pagina"
-    >
-        <div
-        (click)="goToDetail(armor.id)"
-        class="armors__card-data"
+    class="armors__card">
+        <img
+        class="armors__card-image"
+        [src]="armor.image" 
+        alt={{armor.name}}>
+        <p
+        class="armors__card-name"
         >
-            <p
-            class="armors__card-list"
-            >{{ armor.name }}</p>
-        </div>
+            {{armor.name}}
+        </p>
+        <p
+        class="armors__card-weight"
+        >
+            WEIGHT: {{armor.weight}}
+        </p>
+        <p
+        class="armors__card-description"
+        >
+            {{armor.description}}
+        </p>
     </div>
-    <div
+    
+</div>
+<div
     class="armors__buttons"
     >
         <button
@@ -34,4 +40,3 @@ class="armors"
         class="btn"
         >NEXT</button>
     </div>
-</div>
