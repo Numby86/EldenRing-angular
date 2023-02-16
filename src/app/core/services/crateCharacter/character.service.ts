@@ -36,7 +36,10 @@ export class CharacterService {
       this.claseService.getClasesDetail()
     ]).pipe(
       map(([apiCharacter, apiClase]) => {
-        const selectedClase = apiClase.find((clase) => clase.name === apiCharacter.claseName)
+        
+        const selectedClase = apiClase.find((clase) => clase.name === apiCharacter.claseName[0])
+        console.log(apiCharacter, apiClase, selectedClase);
+        
         return transformCharacter(apiCharacter, selectedClase);
       })
     )

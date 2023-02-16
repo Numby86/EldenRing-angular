@@ -33,12 +33,11 @@ export class CharacterComponent implements OnInit {
 
   public deleteCharacter(id?: string){
     if(!id) { return; }
-    this.listCharacters$ = this.characterService.deleteCharacter(id).pipe(
+    this.characterService.deleteCharacter(id).pipe(
       switchMap(() => {
         return this.characterService.getCharacters();
       })
-    )
-    console.log(this.listCharacters$);
+    ).subscribe()
     
   }
 

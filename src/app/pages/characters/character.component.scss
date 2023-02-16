@@ -5,6 +5,9 @@
     flex-direction: column;
     cursor: pointer;
     &__card{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
         margin: 7px;
         width: 600px;
         &-image{
@@ -29,8 +32,8 @@
             }
         }
         &-name{
-            margin-left: 50px;
-            width: 140px;
+            margin-left: 30px;
+            width: 120px;
         }
     }
 }

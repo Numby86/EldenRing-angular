@@ -39,8 +39,8 @@ const routes: Routes = [
   {
     path: 'create-character',
     loadChildren: () => import('./pages/create-character/create-character.module').then(m => m.CreateCharacterModule)
-    // ,
-    // canActivate: [LoggedGuard]
+    ,
+    canActivate: [LoggedGuard]
   },
   {
     path: 'incantations',

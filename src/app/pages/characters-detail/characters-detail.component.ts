@@ -27,6 +27,8 @@ export class CharactersDetailComponent {
     this.activatedRoute.params.subscribe((params) => {
       const characterId = params['id'];
       this.characterService.getCharacterDetail(characterId).subscribe((character) => {
+        console.log(character);
+        
 
         this.character = character;
         

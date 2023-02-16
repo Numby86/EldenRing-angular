@@ -2,7 +2,8 @@ import { ApiWeapon } from './../../../core/services/weapons/weapon.model';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'searchWeapons'
+  name: 'searchWeapons',
+  pure: true
 })
 export class SearchWeaponsPipe implements PipeTransform{
   transform(value: ApiWeapon[] | null, searchName: string = ''): ApiWeapon[] {

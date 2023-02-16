@@ -22,15 +22,15 @@ class="items"
     <div
     class="items__buttons"
     >
-        <button
-        [ngStyle]="pagina <= 0 ? {'display': 'none'} : null"
-        (click)="prevPage()"
-        class="btn"
-        >PREVIOUS</button>
-        <button
-        [ngStyle]="pagina >= 80 ? {'display': 'none'} : null"
-        (click)="nextPage()"
-        class="btn"
-        >NEXT</button>
     </div>
+    <button
+    [ngStyle]="pagina <= 0 ? {'display': 'none'} : null"
+    (click)="prevPage()"
+    class="btn"
+    >PREVIOUS</button>
+    <button
+    [ngStyle]="pagina >= 80 ? {'display': 'none'} : null"
+    (click)="nextPage()"
+    class="btn"
+    >NEXT</button>
 </div>

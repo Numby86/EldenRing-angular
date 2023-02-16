@@ -44,10 +44,5 @@ export class BossesComponent implements OnInit {
       }
     }
 
-    // public onSearchBosses(search: string){
-    //   this.search = search;
-    //   #txtSearch
-    //   (keyup)="onSearchBosses( txtSearch.value )"
-    // }
 
   }

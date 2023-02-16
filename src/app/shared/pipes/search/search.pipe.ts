@@ -3,7 +3,8 @@ import { Bosses } from './../../../core/services/bosses/ApiBosses.model';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'search'
+  name: 'search',
+  pure: true
 })
 export class SearchPipe implements PipeTransform {
 

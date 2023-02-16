@@ -1,6 +1,6 @@
 import { CharacterService } from './../../core/services/crateCharacter/character.service';
 import { ResCharacter } from './../../core/services/crateCharacter/res-character.model';
-import { map, of, switchMap, tap } from 'rxjs';
+import { map, of, switchMap } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ClaseService } from './../../core/services/clases/clase.service';
 import { ResClases } from './../../core/services/clases/res-clase.model';
@@ -25,8 +25,7 @@ export class CreateCharacterComponent implements OnInit {
   public editForm: boolean = false;
   public characterID?: string;
 
-  public eleccion: any;
-  // public defaultSel: any;
+  public eleccion?: ResClases;
 
   constructor(
     private fb: FormBuilder,
@@ -63,9 +62,6 @@ export class CreateCharacterComponent implements OnInit {
       const selectedClass = this.clases.find(clases => clases.name === value);
 
       if (!value){
-        // const valueFr = this.clases.find(clases => clases.name === 'Warrior');
-        // this.eleccion = valueFr;
-        // console.log(this.eleccion);
         return;
       }
 

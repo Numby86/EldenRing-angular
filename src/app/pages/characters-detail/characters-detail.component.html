@@ -26,6 +26,14 @@ class="characterDET"
                 class="characterDET__card-edad"
                 >Edad: {{ character.edad }}</p>
             </div>
+            <div>
+                <p
+                class="characterDET__card-complexion"
+                >Complexion: {{ character.complexion }}</p>
+                <p
+                class="characterDET__card-recuerdo"
+                >Recuerdo: {{ character.recuerdo }}</p>
+            </div>
             <div
             class="characterDET__card-buttons"
             >
@@ -47,11 +55,8 @@ class="characterDET"
             class="characterDET__card-claseName"
             >Clase: {{ character.clases.name }}</p>
             <p
-            class="characterDET__card-complexion"
-            >Complexion: {{ character.complexion }}</p>
-            <p
-            class="characterDET__card-recuerdo"
-            >Recuerdo: {{ character.recuerdo }}</p>
+            class="characterDET__card-claseName"
+            >Clase: {{ character.clases.description }}</p>
         </div>
     </div>
     <button
