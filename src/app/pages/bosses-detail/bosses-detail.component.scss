@@ -79,5 +79,24 @@
             }
         }
     }
+ }
 
+ @media screen and (max-width: 670px) {
+
+    .bossDET{
+        &__card{
+            width: 590px;
+            max-height: 590px;
+            &-image{
+                width: 200px;
+                height: 200px;
+            }
+            &-name{
+                font-size: 20px;
+            }
+            &-text{
+                font-size: 16px;
+            }
+        }
+    }
  }

@@ -124,9 +124,55 @@
             }
         }
     }
-
     .btn{
         margin-bottom: 10px;
     }
+ }
 
+ @media screen and (max-width: 670px) {
+
+    .create{
+        & input, select, option{
+            width: calc(100% - 5%);
+        }
+        &__form{
+            width: calc(100% - 50%);
+        }
+        &__class{
+            &-image{
+                max-width: 155px;
+                height: 280px;
+                margin-left: 3px;
+            }
+            &-stats{
+                margin-top: 10px;
+                & p{
+                    padding: 1.5px;
+                }
+            }
+            &-level{
+                font-size: 15px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+    .btn{
+        margin-bottom: 10px;
+    }
+ }
+
+ @media screen and (max-width: 1024px) {
+
+    .create{
+        & input, select, option{
+            width: calc(100% - 5%);
+        }
+        &__class-image{
+                width: 202px;
+                height: 300px;
+        }
+    }
+    .btn{
+        margin-bottom: 10px;
+    }
  }

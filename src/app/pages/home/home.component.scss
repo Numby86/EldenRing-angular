@@ -1,6 +1,6 @@
 .home{
     background-color: rgba(0, 0, 0, 0.8);
-    height: 775px;
+    height: 100%;
     width: calc(100% - 60%);
     margin-left: 9.4%;
     color: black;
@@ -50,12 +50,41 @@
         justify-content: center;
         width: calc(100% - 10%);
         margin-left: 5%;
-        height: 100%;
         font-size: 18px;
         &__image{
             width: 97%;
             margin-left: 6px;
             height: 240px;
+            margin-top: 15px;
+        }
+    }
+ }
+
+ @media screen and (max-width: 670px) {
+
+    .home{
+        justify-content: center;
+        width: calc(100% - 20%);
+        margin-left: 10%;
+        font-size: 18px;
+        &__image{
+            max-width: 98%;
+            margin: auto;
+        }
+    }
+ }
+
+ @media screen and (max-width: 1024px) {
+
+    .home{
+        justify-content: center;
+        width: calc(100% - 30%);
+        margin-left: 15%;
+        font-size: 22px;
+        &__image{
+            width: 99%;
+            margin-left: 6px;
+            height: 360px;
             margin-top: 15px;
         }
     }

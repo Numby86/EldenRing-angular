@@ -67,3 +67,15 @@
     }
 
  }
+
+ @media screen and (max-width: 670px) {
+
+    .register{
+        width: calc(100% - 15%);
+        height: 500px;
+        & input{
+            width: calc(100% - 5%);
+        }
+    }
+
+ }

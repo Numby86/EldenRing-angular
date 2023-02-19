@@ -107,3 +107,33 @@
     }
     
  }
+
+ @media screen and (max-width: 670px) {
+
+    .characterDET__card{
+        
+            width: 590px;
+            max-height: 563px;
+            &-image{
+                width: 120px;
+                height: 120px;
+            }
+            &-nomEdad{
+                font-size: 18px;
+            }
+            &-nombre{
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            &-imageClase{
+                width: 130px;
+                height: 180px;
+            }
+            &-text{
+                font-size: 15px;
+                padding-top: 6px;
+                gap: 7px;
+            }
+    }
+    
+ }
