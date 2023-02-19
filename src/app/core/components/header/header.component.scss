@@ -4,8 +4,6 @@
     align-items: center;
     margin-top: 10px;
     &__logo{
-        // width: 735px;
-        // height: 356px;
         width: 551.25px;
         height: 267px;
         margin-top: -3%;
@@ -174,3 +172,15 @@
 .none{
     display: none;
 }
+
+@media screen and (max-width: 480px) {
+
+    .header{
+        margin-top: 5px;
+        &__logo{
+            width: 413.25px;
+            height: 200.25px;
+        }
+    }
+
+ }

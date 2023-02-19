@@ -1,6 +1,31 @@
 <div
 class="create"
 >
+<div
+class="create__class"
+>
+    <img
+        *ngIf="eleccion"
+        class='create__class-image'
+        [src]="eleccion.image" 
+        alt="eleccion.image">
+    <div
+    *ngIf="eleccion"
+    class="create__class-stats"
+    >
+        <p
+        class="create__class-level"
+        >NIVEL &nbsp; {{eleccion.stats.level}}</p>
+        <p>Vigor&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{eleccion.stats.vigor}}</p>
+        <p>Mente&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{eleccion.stats.mind}}</p>
+        <p>Aguante&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;  {{eleccion.stats.endurance}}</p>
+        <p>Fuerza&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; {{eleccion.stats.strength}}</p>
+        <p>Destreza&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{eleccion.stats.dexterity}}</p>
+        <p>Inteligencia&nbsp; &nbsp; &nbsp;{{eleccion.stats.intelligence}}</p>
+        <p>Fe&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{eleccion.stats.faith}}</p>
+        <p>Arcano&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; {{eleccion.stats.arcane}}</p>
+    </div>
+</div>
     <form
     *ngIf="createForm"
     (submit)="sendForm()"
@@ -110,29 +135,5 @@ class="create"
         [ngStyle]="{color: !createForm.valid && createForm.touched ? 'red' : 'black'}"
         class="btn"> {{ editForm ? 'EDIT' : 'CREATE' }} </button>
     </form>
-    <div
-    class="create__class"
-    >
-        <img
-            *ngIf="eleccion"
-            class='create__class-image'
-            [src]="eleccion.image" 
-            alt="eleccion.image">
-        <div
-        *ngIf="eleccion"
-        class="create__class-stats"
-        >
-            <p
-            class="create__class-level"
-            >NIVEL &nbsp; {{eleccion.stats.level}}</p>
-            <p>Vigor&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{eleccion.stats.vigor}}</p>
-            <p>Mente&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{eleccion.stats.mind}}</p>
-            <p>Aguante&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;  {{eleccion.stats.endurance}}</p>
-            <p>Fuerza&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; {{eleccion.stats.strength}}</p>
-            <p>Destreza&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{eleccion.stats.dexterity}}</p>
-            <p>Inteligencia&nbsp; &nbsp; &nbsp;{{eleccion.stats.intelligence}}</p>
-            <p>Fe&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{eleccion.stats.faith}}</p>
-            <p>Arcano&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; {{eleccion.stats.arcane}}</p>
-        </div>
-    </div>
+
 </div>

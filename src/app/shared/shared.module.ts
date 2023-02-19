@@ -5,6 +5,7 @@ import { PaginationComponent } from './components/pagination/pagination.componen
 import { SearchPipe } from './pipes/search/search.pipe';
 import { SearchWeaponsPipe } from './pipes/search/search-weapons.pipe';
 import { SortPipe } from './pipes/sort/sort.pipe';
+import { ViewCardsComponent } from './components/view-cards/view-cards.component';
 
 
 
@@ -14,7 +15,8 @@ import { SortPipe } from './pipes/sort/sort.pipe';
     PaginationComponent,
     SearchPipe,
     SearchWeaponsPipe,
-    SortPipe
+    SortPipe,
+    ViewCardsComponent
   ],
   imports: [
     CommonModule
@@ -24,7 +26,8 @@ import { SortPipe } from './pipes/sort/sort.pipe';
     PaginationComponent,
     SearchPipe,
     SearchWeaponsPipe,
-    SortPipe
+    SortPipe,
+    ViewCardsComponent
   ]
 })
 export class SharedModule { }

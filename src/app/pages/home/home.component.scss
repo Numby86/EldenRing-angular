@@ -23,12 +23,14 @@
         font-size: 24px;
         color: #c4b59a;
         margin-top: 10px;
+        padding: 3px;
     }
     &__text{
         color: #c4b59a;
         font-size: 20px;
         margin-left: 12px;
         margin-top: 10px;
+        padding: 5px;
     }
     & a{
         padding: 2px;
@@ -41,3 +43,20 @@
     }
     
 }
+
+@media screen and (max-width: 480px) {
+
+    .home{
+        justify-content: center;
+        width: calc(100% - 10%);
+        margin-left: 5%;
+        height: 100%;
+        font-size: 18px;
+        &__image{
+            width: 97%;
+            margin-left: 6px;
+            height: 240px;
+            margin-top: 15px;
+        }
+    }
+ }

@@ -55,3 +55,15 @@
            }
     }
 }
+
+@media screen and (max-width: 480px) {
+
+    .register{
+        width: calc(100% - 5%);
+        height: 500px;
+        & input{
+            width: calc(100% - 5%);
+        }
+    }
+
+ }

@@ -28,3 +28,12 @@
         gap: 20px;
     }
 }
+
+@media screen and (max-width: 480px) {
+
+    .weapons__card{
+        margin: 7px;
+        width: 375px;
+    }
+    
+ }

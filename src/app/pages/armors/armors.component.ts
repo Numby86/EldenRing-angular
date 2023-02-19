@@ -13,6 +13,7 @@ export class ArmorsComponent implements OnInit {
 
   public armors: Armors[] = [];
   public searchName: string = '';
+  public weight: string = '';
 
   constructor(
     private armorsService: ArmorsService,
@@ -42,6 +43,14 @@ export class ArmorsComponent implements OnInit {
       if (this.pagina < 80) {
         this.pagina += 20;
       }
+    }
+
+    public ordenMenMay(value: string) {
+      this.weight = value;
+    }
+  
+    public ordenMayMen(value: string){
+      this.weight = value;
     }
 
 }

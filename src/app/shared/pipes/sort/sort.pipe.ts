@@ -1,19 +1,23 @@
-import { ApiWeapon } from './../../../core/services/weapons/weapon.model';
+import { Armors } from './../../../core/services/armors/armors.model';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'sort'
+  name: 'sort',
+  pure: true
 })
 export class SortPipe implements PipeTransform {
 
-  transform(weapons: ApiWeapon[] | null, weight: number = 0): ApiWeapon[] {
+  transform(weapons: Armors[] | null, weight: string): Armors[] {
     if(!weapons){return []; }
     if(!weight){return weapons; }
 
-    
-    return weapons.sort((a, b) => ( a.weight > b.weight) ? 1 : -1)
-    
-    
-  }
+    return weapons.sort((a, b) => {
+      if (weight === 'asc') {
+        return a.weight - b.weight;
+      } else if (weight === 'desc') {
+        return b.weight - a.weight;
+      } else { return 0; }      
+    }); 
 
+  }
 }

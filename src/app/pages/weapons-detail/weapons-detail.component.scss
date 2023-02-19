@@ -63,3 +63,24 @@
         }
     }
 }
+
+@media screen and (max-width: 480px) {
+
+    .weaponDET{
+        &__card{
+            width: 390px;
+            max-height: 500px;
+            &-image{
+                width: 150px;
+                height: 150px;
+            }
+            &-name{
+                font-size: 20px;
+            }
+            &-text{
+                font-size: 16px;
+            }
+        }
+    }
+    
+ }

@@ -38,3 +38,18 @@
     }
 }
 
+@media screen and (max-width: 480px) {
+
+    .characters__card{
+        margin: 7px;
+        gap: 5px;
+        width: 390px;
+        &-claseName{
+            display: none;
+        }
+        &-name{
+            margin-left: 30px;
+        }
+    }
+    
+ }
