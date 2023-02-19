@@ -36,3 +36,22 @@
         
     }
 }
+
+@media screen and (max-width: 480px) {
+
+    .error{
+        width: 405px;
+        height: 380px;
+        &__404{
+            font-size: 64px;
+        }
+        &__not{
+            font-size: 23px;
+            margin-bottom: 22px;
+        }
+        &__button{
+            font-size: 16px;
+            padding:  8px 12px 8px 12px;            
+        }
+    }
+ }
