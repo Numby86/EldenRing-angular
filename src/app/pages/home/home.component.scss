@@ -44,7 +44,7 @@
     
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
 
     .home{
         justify-content: center;
@@ -60,7 +60,7 @@
     }
  }
 
- @media screen and (max-width: 670px) {
+ @media screen and (min-width: 480px) and (max-width: 670px) {
 
     .home{
         justify-content: center;
@@ -74,7 +74,7 @@
     }
  }
 
- @media screen and (max-width: 1024px) {
+ @media screen and (min-width: 670px) and (max-width: 1024px) {
 
     .home{
         justify-content: center;

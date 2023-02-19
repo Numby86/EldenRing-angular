@@ -78,7 +78,7 @@
     overflow: hidden;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
 
     .characterDET__card{
         
@@ -108,7 +108,7 @@
     
  }
 
- @media screen and (max-width: 670px) {
+ @media screen and (min-width: 480px) and (max-width: 670px) {
 
     .characterDET__card{
         

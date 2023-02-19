@@ -56,7 +56,7 @@
     }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
 
     .register{
         width: calc(100% - 5%);
@@ -68,7 +68,7 @@
 
  }
 
- @media screen and (max-width: 670px) {
+ @media screen and (min-width: 480px) and (max-width: 670px) {
 
     .register{
         width: calc(100% - 15%);

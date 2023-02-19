@@ -64,7 +64,7 @@
     }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
 
     .weaponDET{
         &__card{
@@ -85,7 +85,7 @@
     
  }
 
- @media screen and (max-width: 670px) {
+ @media screen and (min-width: 480px) and (max-width: 670px) {
 
     .weaponDET{
         &__card{

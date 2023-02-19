@@ -173,7 +173,7 @@
     display: none;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
 
     .header{
         margin-top: 5px;
@@ -188,7 +188,7 @@
 
  }
 
- @media screen and (max-width: 670px) {
+ @media screen and (min-width: 480px) and (max-width: 670px) {
 
     .nav-main__menu{
         height: calc(90vh - 65px);
@@ -196,7 +196,7 @@
 
  }
 
- @media screen and (max-width: 1024px) {
+ @media screen and (min-width: 670px) and  (max-width: 1024px) {
 
     .nav-main__menu{
         height: calc(90vh - 65px);
