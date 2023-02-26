@@ -129,7 +129,7 @@
     }
  }
 
- @media screen and (min-width: 480px) and (max-width: 670px) {
+ @media all and (min-width: 480px) and (max-width: 670px) {
 
     .create{
         & input, select, option{
@@ -161,7 +161,7 @@
     }
  }
 
- @media screen and (min-width: 670px) and (max-width: 1024px) {
+ @media all and (min-width: 670px) and (max-width: 1024px) {
 
     .create{
         & input, select, option{

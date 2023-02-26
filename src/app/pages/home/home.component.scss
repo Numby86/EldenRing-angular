@@ -59,7 +59,7 @@
     }
  }
 
- @media screen and (min-width: 480px) and (max-width: 670px) {
+ @media all and (min-width: 480px) and (max-width: 670px) {
 
     .home{
         justify-content: center;
@@ -73,7 +73,7 @@
     }
  }
 
- @media screen and (min-width: 670px) and (max-width: 1024px) {
+ @media all and (min-width: 670px) and (max-width: 1024px) {
 
     .home{
         justify-content: center;

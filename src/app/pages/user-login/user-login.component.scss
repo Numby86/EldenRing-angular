@@ -82,7 +82,7 @@
     }
 
  }
- @media screen and (min-width: 480px) and (max-width: 670px) {
+ @media all and (min-width: 480px) and (max-width: 670px) {
 
     .login{
         width: calc(100% - 15%);
