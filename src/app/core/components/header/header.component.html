@@ -28,6 +28,7 @@ class="logout"
     type="checkbox"
     class="nav-main__btn-collapse"
     id="navMain__checkbox"
+    [(ngModel)]="checked"
     >
     <label
     for="navMain__checkbox"
@@ -40,11 +41,13 @@ class="logout"
     <div class="nav-main__btn-collapse-bg"></div>
     <div class="social-networks">
         <a 
+        (click)="noChecked()"
         [routerLink]="['login']"
         routerLinkActive="active2"
         class="social-networks__link-item">
             <i class="fa-solid fa-user"></i></a>
         <a
+        (click)="noChecked()"
         [routerLink]="['register']"
         routerLinkActive="active2"
         class="social-networks__link-item">
@@ -54,38 +57,56 @@ class="logout"
         <a
         [routerLink]="['home']"
         routerLinkActive="active"
-        class="nav-main__link-item">HOME</a>
+        class="nav-main__link-item"
+        (click)="noChecked()"
+        >HOME</a>
         <a
         [routerLink]="['create-character']"
         routerLinkActive="active"
-        class="nav-main__link-item">CREAR</a>
+        class="nav-main__link-item"
+        (click)="noChecked()"
+        >CREAR</a>
         <a
         [routerLink]="['characters']"
         routerLinkActive="active"
-        class="nav-main__link-item">JUGADORES</a>
+        class="nav-main__link-item"
+        (click)="noChecked()"
+        >JUGADORES</a>
         <a
         [routerLink]="['bosses']"
         routerLinkActive="active"
-        class="nav-main__link-item">BOSSES</a>
+        class="nav-main__link-item"
+        (click)="noChecked()"
+        >BOSSES</a>
         <a
         [routerLink]="['weapons']"
         routerLinkActive="active"
-        class="nav-main__link-item">ARMAS</a>
+        class="nav-main__link-item"
+        (click)="noChecked()"
+        >ARMAS</a>
         <a
         [routerLink]="['armors']"
         routerLinkActive="active"
-        class="nav-main__link-item">ARMADURAS</a>
+        class="nav-main__link-item"
+        (click)="noChecked()"
+        >ARMADURAS</a>
         <a
         [routerLink]="['talismans']"
         routerLinkActive="active"
-        class="nav-main__link-item">TALISMANES</a>
+        class="nav-main__link-item"
+        (click)="noChecked()"
+        >TALISMANES</a>
         <a
         [routerLink]="['incantations']"
         routerLinkActive="active"
-        class="nav-main__link-item">HECHIZOS</a>
+        class="nav-main__link-item"
+        (click)="noChecked()"
+        >HECHIZOS</a>
         <a
         [routerLink]="['items']"
         routerLinkActive="active"
-        class="nav-main__link-item">ITEMS</a>
+        class="nav-main__link-item"
+        (click)="noChecked()"
+        >ITEMS</a>
     </div>
 </nav>

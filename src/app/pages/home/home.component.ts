@@ -1,7 +1,6 @@
 import { Router } from '@angular/router';
 import { myLocations } from './../../core/services/locations/locations.data';
 import { Locations } from '../../core/services/locations/locations.data';
-import { LocationsService } from './../../core/services/locations/locations.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -18,7 +17,6 @@ export class HomeComponent implements OnInit {
   public myNumber:number = 0;
 
   constructor(
-    private locationsService: LocationsService,
     private router: Router
   ){}
 
@@ -26,14 +24,11 @@ export class HomeComponent implements OnInit {
   
   ngOnInit(): void {
 
-    // this.locationsService.getBosses().subscribe((locaFromApi) => {
-    //   this.locations = locaFromApi;
-    // })
-
     setInterval(() => {
-      const randomNuber = () => Math.floor(Math.random() * 11) + 1;
+      const randomNuber = () => Math.floor(Math.random() * 20);
       this.myNumber = randomNuber();
     }, 3000);
+    
   }
 
   public goToRegister (){

@@ -13,6 +13,8 @@ export class HeaderComponent implements OnInit {
   
   public logOut: boolean = false;
 
+  public checked: boolean = false;
+
   constructor(
     private router: Router,
     private apiUserService: ApiUserService
@@ -33,6 +35,10 @@ export class HeaderComponent implements OnInit {
 
   public goHome(){
     this.router.navigate(['home'])
+  }
+
+  public noChecked(){
+    this.checked = false;
   }
 
 }

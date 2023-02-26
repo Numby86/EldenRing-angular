@@ -6,18 +6,17 @@
     box-sizing: border-box;
 }
 
-@import "./animations/animations.scss";
 @import "./class/1ndexClass.scss";
 @import "./colors/colors.scss";
 
 :root{
-    // --ifm-color-primary: #ab966f;
-    // --ifm-color-primary-dark: #998763;
-    // --ifm-color-primary-darker: #887858;
-    // --ifm-color-primary-darkest: #77694d;
-    // --ifm-color-primary-light: #b3a07d;
-    // --ifm-color-primary-lighter: #bbab8b;
-    // --ifm-color-primary-lightest: #c4b59a;
+    --ifm-color-primary: #ab966f;
+    --ifm-color-primary-dark: #998763;
+    --ifm-color-primary-darker: #887858;
+    --ifm-color-primary-darkest: #77694d;
+    --ifm-color-primary-light: #b3a07d;
+    --ifm-color-primary-lighter: #bbab8b;
+    --ifm-color-primary-lightest: #c4b59a;
 
     --ifm-code-font-size: 95%;
 

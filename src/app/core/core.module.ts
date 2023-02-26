@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { LoaderComponent } from './components/loader/loader.component';
 import { RouterModule } from '@angular/router';
@@ -17,7 +18,8 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent,
