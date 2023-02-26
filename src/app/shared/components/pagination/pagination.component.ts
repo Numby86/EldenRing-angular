@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-pagination',
@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class PaginationComponent {
 
-  public pagina: number = 0;
+  @Input() pagina: number = 0;
 
   public prevPage(){
     if(this.pagina > 0){

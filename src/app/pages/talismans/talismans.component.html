@@ -16,7 +16,7 @@ class="talismans"
     class="talismans__card">
         <img
         class="talismans__card-image"
-        [src]="talisman.image" 
+        [src]="talisman.image || 'https://assets.reedpopcdn.com/elden-ring-golden-seeds-locations-8042-1648051935260.jpg/BROK/thumbnail/1200x1200/quality/100/elden-ring-golden-seeds-locations-8042-1648051935260.jpg'" 
         alt={{talisman.name}}>
         <p
         class="talismans__card-name"
@@ -49,4 +49,4 @@ class="talismans"
         (click)="nextPage()"
         class="btn"
         >NEXT</button>
-    </div>
+</div>

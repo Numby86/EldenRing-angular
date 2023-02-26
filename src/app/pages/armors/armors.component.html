@@ -28,7 +28,7 @@ class="armors"
     class="armors__card">
         <img
         class="armors__card-image"
-        [src]="armor.image" 
+        [src]="armor.image || 'https://assets.reedpopcdn.com/elden-ring-golden-seeds-locations-8042-1648051935260.jpg/BROK/thumbnail/1200x1200/quality/100/elden-ring-golden-seeds-locations-8042-1648051935260.jpg'" 
         alt={{armor.name}}>
         <p
         class="armors__card-name"
@@ -46,9 +46,7 @@ class="armors"
             {{armor.description}}
         </p>
     </div>
-    
-</div>
-<div
+    <!-- <div
     class="armors__buttons"
     >
         <button
@@ -61,4 +59,5 @@ class="armors"
         (click)="nextPage()"
         class="btn"
         >NEXT</button>
-    </div>
+    </div> -->
+</div>

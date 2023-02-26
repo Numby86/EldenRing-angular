@@ -11,6 +11,8 @@ import { Component, OnInit } from '@angular/core';
 export class ItemsComponent implements OnInit {
 
   public items: Item[] = [];
+  public searchName: string = '';
+  public pagina: number = 0;
 
   constructor(
     private itemsService: ItemsService
@@ -22,9 +24,6 @@ export class ItemsComponent implements OnInit {
     })
 
   }
-
-  public pagina: number = 0;
-  public searchName: string = '';
 
   public prevPage(){
     if(this.pagina > 0){

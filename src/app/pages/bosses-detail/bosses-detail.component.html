@@ -11,7 +11,7 @@ class="bossDET"
         >
             <img 
             class="bossDET__card-image"
-            [src]="boss.data.image" 
+            [src]="boss.data.image || 'https://assets.reedpopcdn.com/elden-ring-golden-seeds-locations-8042-1648051935260.jpg/BROK/thumbnail/1200x1200/quality/100/elden-ring-golden-seeds-locations-8042-1648051935260.jpg'" 
             alt="imagen {{ boss.data.name }}">
             <div
             class="bossDET__card-dropsStats"

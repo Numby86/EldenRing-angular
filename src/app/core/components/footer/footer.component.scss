@@ -12,6 +12,7 @@
 }
 a{
     background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
     font-weight: bold;
     font-size: 18px;
     color: #ab966f;
@@ -23,7 +24,6 @@ a{
     }
     &:hover{
         box-shadow: 0 0 8px #ab966f;
-        border-radius: 10px;
     }
 }
 

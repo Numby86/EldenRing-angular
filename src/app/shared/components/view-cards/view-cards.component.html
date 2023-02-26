@@ -1,55 +1,15 @@
-<div
-class="armors__buttons"
+<!-- <div
+class="elements"
 >
-    <button
-    class="btn"
-    (click)="ordenMenMay('asc')"
-    >ASC</button>
-    <button
-    class="btn"
-    (click)="ordenMayMen('desc')"
-    >DES</button>
-</div>
-<div
-class="armors"
->
-
-    <div
-    *ngFor="let armor of armors | pagination:pagina | sort:weight"
-    class="armors__card">
-        <img
-        class="armors__card-image"
-        [src]="armor.image" 
-        alt={{armor.name}}>
-        <p
-        class="armors__card-name"
-        >
-            {{armor.name}}
-        </p>
-        <p
-        class="armors__card-weight"
-        >
-            PESO: {{armor.weight}}
-        </p>
-        <p
-        class="armors__card-description"
-        >
-            {{armor.description}}
-        </p>
-    </div>
-    
-</div>
-<div
-    class="armors__buttons"
+    <img [src]="elementIMG" alt={{ elementNAME }}>
+    <p
+    class="elements__card-name"
     >
-        <button
-        [ngStyle]="pagina <= 0 ? {'display': 'none'} : null"
-        (click)="prevPage()"
-        class="btn"
-        >PREVIOUS</button>
-        <button
-        [ngStyle]="pagina >= 80 ? {'display': 'none'} : null"
-        (click)="nextPage()"
-        class="btn"
-        >NEXT</button>
-    </div>
+        {{ elementNAME }}
+    </p>
+    <p
+    class="elements__card-description"
+    >
+        {{ elementDES }}
+    </p>
+</div> -->
