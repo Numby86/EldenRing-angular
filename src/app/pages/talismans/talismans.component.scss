@@ -19,37 +19,37 @@
         border: #c4b59a 1px solid;
             box-shadow: 0 0 15px #c4b59a;
         gap: 15px;
-        &-image{
-            width: 180px;
-            height: 180px;
-            margin-top: 5px;
-            background-color: rgba(0, 0, 0, 0.8);
-            border: #c4b59a 1px solid;
-            box-shadow: 0 0 15px #c4b59a;
-            border-radius: 30%;
-        }
-        &-name{
-            background-color: rgba(0, 0, 0, 0.8);
-            border: #c4b59a 1px solid;
-            box-shadow: 0 0 15px #c4b59a;
-            border-radius: 3%;
-            font-weight: bold;
-            padding: 5px;
-            font-size: 18px;
-        }
-        &-effect{
-            color: black;
-            font-weight: bold;
-            font-size: 15px;
-        }
-        &-description{
-            background-color: #c4b59a;
-            border: 1px solid black;
-            font-size: 13px;
-            color: black;
-            box-shadow: 0 0 15px black;
-            padding: 2px;
-        }
+            &-image{
+                width: 180px;
+                height: 180px;
+                margin-top: 5px;
+                background-color: rgba(0, 0, 0, 0.8);
+                border: #c4b59a 1px solid;
+                box-shadow: 0 0 15px #c4b59a;
+                border-radius: 30%;
+            }
+            &-name{
+                background-color: rgba(0, 0, 0, 0.8);
+                border: #c4b59a 1px solid;
+                box-shadow: 0 0 15px #c4b59a;
+                border-radius: 3%;
+                font-weight: bold;
+                padding: 5px;
+                font-size: 18px;
+            }
+            &-effect{
+                color: black;
+                font-weight: bold;
+                font-size: 15px;
+            }
+            &-description{
+                background-color: #c4b59a;
+                border: 1px solid black;
+                font-size: 13px;
+                color: black;
+                box-shadow: 0 0 15px black;
+                padding: 2px;
+            }
         }
         &__buttons{
             display: flex;

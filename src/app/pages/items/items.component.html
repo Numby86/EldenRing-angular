@@ -34,19 +34,19 @@ class="items"
             {{item.description}}
         </p>
     </div>
-    <div
-        class="items__buttons"
-        >
-        <button
-        [ngStyle]="pagina <= 0 ? {'display': 'none'} : null"
-        (click)="prevPage()"
-        class="btn"
-        >PREVIOUS</button>
-        <button
-        [ngStyle]="pagina >= 80 ? {'display': 'none'} : null"
-        (click)="nextPage()"
-        class="btn"
-        >NEXT</button>
-    </div>
-    <!-- <app-pagination [pagina]="pagina"></app-pagination> -->
 </div>
+<div
+class="items__buttons"
+>
+<button
+[ngStyle]="pagina <= 0 ? {'display': 'none'} : null"
+(click)="prevPage()"
+class="btn"
+>PREVIOUS</button>
+<button
+[ngStyle]="pagina >= 80 ? {'display': 'none'} : null"
+(click)="nextPage()"
+class="btn"
+>NEXT</button>
+</div>
+    <!-- <app-pagination [pagina]="pagina"></app-pagination> -->
