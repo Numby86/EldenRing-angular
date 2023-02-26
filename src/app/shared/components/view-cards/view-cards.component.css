@@ -1,0 +1,64 @@
+.armors {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.armors__card {
+  margin: 7px;
+  width: 335px;
+  height: 415px;
+  background-color: #77694d;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 7px;
+  border-radius: 10px;
+  border: #c4b59a 1px solid;
+  box-shadow: 0 0 15px #c4b59a;
+  gap: 15px;
+}
+.armors__card-image {
+  width: 180px;
+  height: 180px;
+  margin-top: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: #c4b59a 1px solid;
+  box-shadow: 0 0 15px #c4b59a;
+  border-radius: 30%;
+}
+.armors__card-name {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: #c4b59a 1px solid;
+  box-shadow: 0 0 15px #c4b59a;
+  border-radius: 3%;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 18px;
+}
+.armors__card-weight {
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+.armors__card-description {
+  background-color: #c4b59a;
+  border: 1px solid black;
+  font-size: 13px;
+  color: black;
+  box-shadow: 0 0 15px black;
+  padding: 2px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.armors__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  gap: 20px;
+}/*# sourceMappingURL=view-cards.component.css.map */

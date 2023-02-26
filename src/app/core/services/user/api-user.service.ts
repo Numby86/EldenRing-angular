@@ -1,7 +1,8 @@
+import { LoaderService } from './../loader/loader.service';
 import { Router } from '@angular/router';
-import { LoginJWT, Login } from './../login.model';
+import { LoginJWT, Login } from './login.model';
 import { Observable, tap, ReplaySubject } from 'rxjs';
-import { Register } from './../register.model';
+import { Register } from './register.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -21,7 +22,8 @@ export class ApiUserService {
 
   constructor(
     private http: HttpClient,
-    private router: Router
+    private router: Router,
+    private loaderService: LoaderService
   ) { 
     this.userLogged$.next(this.isLogged());
    }
@@ -31,6 +33,7 @@ export class ApiUserService {
   }
 
   public loginApiUser(body: Login): Observable<LoginJWT>{
+    this.loaderService.showLoading();
     return this.http.post<LoginJWT>(`${API_URL_LOGIN_JWT}`, body).pipe(
       tap((res: LoginJWT) => {
         const userStore = JSON.stringify({
@@ -41,7 +44,8 @@ export class ApiUserService {
         localStorage.setItem(TOKEN_KEY, userStore);
         this.userLogged$.next(true);
         this.router.navigate(['home']);
-      })
+      }),
+      tap(() => this.loaderService.hideLoading())
     )
   }
 
@@ -64,20 +68,5 @@ export class ApiUserService {
     const checkToken = localStorage.getItem(TOKEN_KEY);
     return checkToken ? JSON.parse(checkToken).token : null;
   }
-
-
-  
-
-// constructor() {
-//   this.userLogged$.next(false);
-// }
-
-// public login() {
-//   this.userLogged$.next(true);
-// }
-
-// public logout() {
-//   this.userLogged$.next(false);
-// }
   
 }

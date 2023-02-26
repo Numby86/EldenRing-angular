@@ -17,10 +17,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/armors/armors.module').then(m => m.ArmorsModule)
   },
   {
-    path: 'armors-detail/:id',
-    loadChildren: () => import('./pages/armors-detail/armors-detail.module').then(m => m.ArmorsDetailModule)
-  },
-  {
     path: 'bosses',
     loadChildren: () => import('./pages/bosses/bosses.module').then(m => m.BossesModule)
   }, 

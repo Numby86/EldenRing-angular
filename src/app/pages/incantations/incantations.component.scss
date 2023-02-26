@@ -60,4 +60,9 @@
             margin-top: 10px;
             gap: 30px;
         }
+        &__input{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }

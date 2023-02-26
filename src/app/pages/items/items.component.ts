@@ -24,8 +24,7 @@ export class ItemsComponent implements OnInit {
   }
 
   public pagina: number = 0;
-
-
+  public searchName: string = '';
 
   public prevPage(){
     if(this.pagina > 0){

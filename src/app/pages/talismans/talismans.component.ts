@@ -24,6 +24,7 @@ export class TalismansComponent implements OnInit {
   }
 
   public pagina: number = 0;
+  public searchName: string = '';
 
   public prevPage(){
     if(this.pagina > 0){

@@ -6,13 +6,13 @@ export interface ResArmors {
 }
 
 export interface Armors {
-    id:          string;
+    id?:          string;
     name:        string;
     image:       string;
     description: string;
-    category:    Category;
-    dmgNegation: DmgNegation[];
-    resistance:  DmgNegation[];
+    category?:    Category;
+    dmgNegation?: DmgNegation[];
+    resistance?:  DmgNegation[];
     weight:      number;
 }
 

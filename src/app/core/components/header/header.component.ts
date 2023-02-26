@@ -1,4 +1,4 @@
-import { ApiUserService } from './../../services/user/api/api-user.service';
+import { ApiUserService } from '../../services/user/api-user.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 

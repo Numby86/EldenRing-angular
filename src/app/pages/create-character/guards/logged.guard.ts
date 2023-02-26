@@ -1,4 +1,4 @@
-import { ApiUserService } from './../../../core/services/user/api/api-user.service';
+import { ApiUserService } from '../../../core/services/user/api-user.service';
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable, take, map } from 'rxjs';

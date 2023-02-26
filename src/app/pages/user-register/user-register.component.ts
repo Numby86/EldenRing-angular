@@ -1,5 +1,5 @@
 import { Router } from '@angular/router';
-import { ApiUserService } from './../../core/services/user/api/api-user.service';
+import { ApiUserService } from '../../core/services/user/api-user.service';
 import {
   FormBuilder,
   FormGroup,

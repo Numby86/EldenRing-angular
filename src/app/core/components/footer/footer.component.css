@@ -1,0 +1,35 @@
+.footer {
+  margin-top: 30px;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.fa-brands {
+  font-weight: bold;
+  font-size: 18px;
+  color: #ab966f;
+}
+
+a {
+  font-weight: bold;
+  font-size: 18px;
+  color: #ab966f;
+  margin-bottom: 10px;
+  text-decoration: none;
+  padding: 2px 5px 2px 5px;
+}
+a:visited {
+  color: #ab966f;
+}
+a:hover {
+  box-shadow: 0 0 8px #ab966f;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    margin-top: 15px;
+  }
+}/*# sourceMappingURL=footer.component.css.map */

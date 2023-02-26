@@ -1,8 +1,18 @@
 <div
+class="talismans__input"
+>
+    <input
+    class="ipt"
+    type="text" 
+    placeholder="Buscar ..."
+    [(ngModel)]="searchName"
+    />
+</div>
+<div
 class="talismans"
 >
     <div
-    *ngFor="let talisman of talismans | pagination:pagina"
+    *ngFor="let talisman of talismans | pagination:pagina | searchTalismans:searchName"
     class="talismans__card">
         <img
         class="talismans__card-image"

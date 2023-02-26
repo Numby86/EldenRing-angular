@@ -31,6 +31,7 @@ export class CharacterService {
   }
 
   public getCharacterDetail(id: string): Observable<CompleteCharacter> {
+    this.loaderService.showLoading();
     return forkJoin([
       this.apiCharacterService.getApiCharacterDetail(id),
       this.claseService.getClasesDetail()
@@ -41,7 +42,8 @@ export class CharacterService {
         console.log(apiCharacter, apiClase, selectedClase);
         
         return transformCharacter(apiCharacter, selectedClase);
-      })
+      }),
+      tap(() => this.loaderService.hideLoading())
     )
   }
 

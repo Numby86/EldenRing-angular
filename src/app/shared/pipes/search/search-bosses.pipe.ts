@@ -1,8 +1,8 @@
-import { Bosses } from './../../../core/services/bosses/ApiBosses.model';
+import { Bosses } from '../../../core/services/bosses/ApiBosses.model';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'search',
+  name: 'searchBosses',
   pure: true
 })
 export class SearchPipe implements PipeTransform {
@@ -16,11 +16,3 @@ export class SearchPipe implements PipeTransform {
   }
   
 }
-
-// transform<T>(data: T[] | null, searchName: string = ''): T[] {
-//   if(!data){return []; }
-//   if(!searchName){return data; }
-//   return data.filter((res) => {
-//     return res.name.toLowerCase().includes(searchName)
-//   })
-// }

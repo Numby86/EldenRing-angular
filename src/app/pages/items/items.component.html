@@ -1,8 +1,18 @@
 <div
+class="items__input"
+>
+    <input
+    class="ipt"
+    type="text" 
+    placeholder="Buscar ..."
+    [(ngModel)]="searchName"
+    />
+</div>
+<div
 class="items"
 >
     <div
-    *ngFor="let item of items | pagination:pagina"
+    *ngFor="let item of items | pagination:pagina | searchItems:searchName"
     class="items__card">
         <img
         class="items__card-image"
@@ -19,10 +29,10 @@ class="items"
             {{item.description}}
         </p>
     </div>
-    <div
+    </div>
+<div
     class="items__buttons"
     >
-    </div>
     <button
     [ngStyle]="pagina <= 0 ? {'display': 'none'} : null"
     (click)="prevPage()"

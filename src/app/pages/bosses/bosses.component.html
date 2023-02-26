@@ -9,7 +9,7 @@ class="bosses"
     />
     <div
     class="bosses__card"
-    *ngFor="let boss of bosses | pagination:pagina | search:searchName"
+    *ngFor="let boss of bosses | pagination:pagina | searchBosses:searchName"
     >
         <div
         (click)="goToDetail(boss.id)"
@@ -18,6 +18,9 @@ class="bosses"
             <p
             class="bosses__card-list"
             >{{ boss.name }}</p>
+            <p
+            class="bosses__card-info"
+            > + </p>
         </div>
     </div>
     <div

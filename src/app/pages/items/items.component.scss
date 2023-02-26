@@ -53,5 +53,10 @@
             margin-top: 10px;
             gap: 20px;
         }
+        &__input{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 

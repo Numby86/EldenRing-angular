@@ -1,4 +1,14 @@
 <div
+class="armors__input"
+>
+    <input
+    class="ipt"
+    type="text" 
+    placeholder="Buscar ..."
+    [(ngModel)]="searchName"
+    />
+</div>
+<div
 class="armors__buttons"
 >
     <button
@@ -13,9 +23,8 @@ class="armors__buttons"
 <div
 class="armors"
 >
-
     <div
-    *ngFor="let armor of armors | pagination:pagina | sort:weight"
+    *ngFor="let armor of armors | sort:weight | searchArmors:searchName"
     class="armors__card">
         <img
         class="armors__card-image"

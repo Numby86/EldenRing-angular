@@ -1,8 +1,18 @@
 <div
+class="incantations__input"
+>
+    <input
+    class="ipt"
+    type="text" 
+    placeholder="Buscar ..."
+    [(ngModel)]="searchName"
+    />
+</div>
+<div
 class="incantations"
 >
     <div
-    *ngFor="let incantation of incantations | pagination:pagina"
+    *ngFor="let incantation of incantations | pagination:pagina | searchIncantations:searchName"
     class="incantations__card">
         <img
         class="incantations__card-image"
@@ -39,4 +49,4 @@ class="incantations"
         (click)="nextPage()"
         class="btn"
         >NEXT</button>
-    </div>
+</div>
