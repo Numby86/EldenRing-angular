@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'pagination',
-  pure: true
+  pure: false
 })
 export class PaginationPipe implements PipeTransform {
 

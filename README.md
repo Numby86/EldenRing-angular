@@ -16,8 +16,9 @@ Y en el footer he puesto enlaces a mi gitHub y a mi linkedin.
 Si en la pagina se tiene que pintar una imagen y no existe en la api, se pinta una imagen de una semilla del juego.
 -   Creo una pagina en la que puedes crearte tu propio personaje igual que en el juego que es un formulario con varios inputs, uno de ellos un select en el que al seleccionar la clase que quieres para tu personaje, te pinta al lado la imagen de esa clase y sus estadisticas.
 Si al crearte el personaje no subes una imagen, en el listado de jugadores se muestra una imagen de user neutra.
+Todos los formularios, los de login, register y este son reactivos y en todos te muestra el tipo de error por campo si es requerido o lo que pida y tambien en errores de registro que vienen de la api de node, como tener mal el email al loguearte o la contraseña.
 Para crearte ese personaje debes estar registrado, asique esa ruta tiene una guardia que te pide que hagas login antes de acceder.
--   Los componentes estan hechos en styles, con estructura BEM, salvo alguna cosa excepcional como el navbar que se creo aparte y alguna clase como btn e ipt.
+-   Los componentes estan hechos con estructura BEM para su scss, salvo alguna cosa excepcional como el navbar que se creo aparte y alguna clase como btn e ipt.
 -   Los jugadores creados se pueden consultar en otra vista aparte que pinta la lista con los jugadores (en esta lista hay un button que te permite borrar al jugador creado, funciona pero lo tengo comentado porque la he desplegado y no quiero que me borren jugadores, mas adelante lo pondre para que solo yo pueda eliminarlos), y cada jugador tiene su vista detalle. Que esta creada con una llamada combinada (forkJoin), en el que por un lado te pinta datos del jugador y por otro datos de su clase elegida.
 En esta vista de detalle tienes una opcion en la que puedes editar tu personaje, que te devuelve al formulario de creacion pero ya con tus datos rellenados para que cambies el campo que quieras.
 -   Todos las colecciones de clases, usuarios, jugadores, estan subidos a la base de datos hecha con nodeJS.

@@ -3,7 +3,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'searchTalismans',
-  pure: true
+  pure: false
 })
 export class SearchTalismansPipe implements PipeTransform {
   transform(value: Talismans[] | null, searchName: string = ''): Talismans[] {
