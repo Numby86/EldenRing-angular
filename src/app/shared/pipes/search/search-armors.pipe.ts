@@ -14,3 +14,5 @@ export class SearchArmorsPipe implements PipeTransform {
     })
   }
 }
+
+

@@ -4,7 +4,7 @@ import { ResCharacter } from './../res-character.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-const API_CHARACTER_URL = 'https://movies-five-eosin.vercel.app/personaje';
+const API_CHARACTER_URL = 'https://nodejs-proyectodb-ne39mugrc-numby86.vercel.app/personaje';
 
 @Injectable({
   providedIn: 'root'
